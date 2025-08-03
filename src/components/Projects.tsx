@@ -55,65 +55,158 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "AI Budget Management System",
-      description: "Advanced budget management system built with MERN Stack, integrated with Braintree, Prisma, and JWT for secure payments. Features AI-powered auto-categorization and real-time transaction management.",
+      title: "WealthSync – AI-Powerd Budgeting and Finance Optimization System",
+      description:
+        "An AI-powered system to track expenses, automate recurring payments, and give smart insights for better budgeting and financial control — all through a secure, personalized, and seamless user experience.",
       icon: Database,
-      technologies: ["React", "Node.js", "MongoDB", "Express.js", "Braintree", "Prisma", "JWT"],
-      features: [
-        "Secure user authentication with JWT",
-        "AI-powered transaction categorization",
-        "Real-time payment processing",
-        "Interactive dashboard with charts"
+      technologies: [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Framer Motion",
+        "Zustand",
+        "React Hook Form",
+        "Zod",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Prisma",
+        "Supabase",
+
+        "JWT",
+        "Clerk",
+        "Inngest",
+        "Arcjet",
+        "Cloudinary",
       ],
-      githubUrl: "#",
+      features: [
+        "AI-Powered Smart Transaction Categorization",
+
+        "Real-Time Expense Tracking and Analytics",
+        "State Management with Zustand",
+
+        "Form Handling and Validation with React Hook Form + Zod",
+
+        "Scalable Backend with Node.js, Express & Prisma",
+
+        "Managed Database with Supabase (PostgreSQL)",
+
+        "OCR-Based Receipt Scanning and Auto-Fill",
+
+        "Multi-Account and Transaction Type Support",
+
+        "Intelligent Budget Creation and Management",
+
+        "Personalized Budget Suggestions and Email Alerts using AI",
+
+        "Secure User Authentication via Clerk (OAuth)",
+
+        "Bot Protection and Rate Limiting via Arcjet",
+
+        "Fast Server-Side Rendering with Next.js",
+
+        "Cloud-Based Receipt and Media Storage (Cloudinary)",
+
+        "Event-Driven and Cron-Based Workflows (using Inngest)",
+
+        "Budget Limit Alerts and Notifications",
+      ],
+      githubUrl: "https://github.com/aabidali641/WealthSync-",
       liveUrl: "#",
-      category: "Full Stack"
+      category: "Full Stack With AI Integration",
     },
     {
-      title: "Chat Authentication System",
-      description: "Secure authentication system enabling seamless login via GitHub and LinkedIn using OAuth. Built with React for frontend and Node.js for backend with JWT token management.",
+      title:
+        "Nexus Society – The Smart And Complete Solution for Campus Societies",
+      description:
+        "A full-stack, university-authenticated web platform for managing campus societies — offering secure student registration, digital notice boards, event creation, result announcements, online payments, merchandise handling, real-time email alerts, and an interactive dashboard for admins and students alike — all designed to bring efficiency, transparency, and digital empowerment to student life..",
       icon: Globe,
-      technologies: ["React", "Node.js", "OAuth", "GitHub API", "LinkedIn API", "JWT"],
-      features: [
-        "OAuth integration with GitHub & LinkedIn",
-        "Secure JWT token management",
-        "Real-time user session handling",
-        "Responsive design"
+      technologies: [
+        "React",
+        "Vite",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Framer Motion",
+        "React Parallax Tilt",
+
+        "Redux Toolkit",
+        "React Router DOM",
+        "JWT",
+
+        "Nodemailer",
+        "Razorpay",
+        "Cloudinary",
+        "Recharts",
+        "React Toastify",
+        "Vercel",
+        "Render",
+        "GitHub Actions",
       ],
-      githubUrl: "#",
-      liveUrl: "#",
-      category: "Authentication"
+
+      features: [
+        "University-verified registration and role-based access control for students and admins",
+        "Secure JWT-based authentication with protected routes and session handling",
+        "Event creation, editing, registration, and real-time result announcements",
+        "Merchandise listing, order management, and secure payment integration using Razorpay",
+        "Digital notice board with downloadable PDFs and email notifications",
+        "Merchandise listing and order management with admin control panel",
+        "Bulk and individual email communication using Nodemailer with password recovery support",
+        "Admin dashboard with stats and charts powered by Recharts for analytics",
+        "Suggestion and feedback module with admin inbox for two-way communication",
+        "Responsive mobile-first UI with Tailwind CSS, Framer Motion, and interactive UI effects",
+        "Form handling and validation using React Hook Form, and client-side routing via React Router",
+        "Image and media storage using Cloudinary with secure access and display",
+        "State management using Redux Toolkit and global context for user and event data",
+
+        "Paperless, eco-friendly system eliminating need for WhatsApp, Google Forms, or physical notices",
+      ],
+      githubUrl: "https://github.com/sachinchauhan010/NexusSocietyFrontend",
+      liveUrl: "https://nexussociety.vercel.app/",
+      category: "Full Stack",
     },
     {
       title: "Interactive Java Games",
-      description: "Collection of four interactive Java-based games including Guessing Game, Rock-Paper-Scissors, Tic-Tac-Toe, and Connect Four. Demonstrates OOP principles and game logic implementation.",
+      description:
+        "Collection of four interactive Java-based games including Guessing Game, Rock-Paper-Scissors, Tic-Tac-Toe, and Connect Four. Demonstrates OOP principles and game logic implementation.",
       icon: Smartphone,
       technologies: ["Java", "OOP", "Swing", "Game Logic", "Algorithms"],
       features: [
         "Multiple game implementations",
         "Clean user interface design",
         "Advanced game algorithms",
-        "Object-oriented architecture"
+        "Object-oriented architecture",
       ],
       githubUrl: "#",
       liveUrl: "#",
-      category: "Java Applications"
+      category: "Java Applications",
     },
     {
       title: "RESTful API Development",
-      description: "Comprehensive REST API built with Node.js and Express.js, featuring automated recurring payments, transaction scheduling using Cron jobs, and merchant payment integration.",
+      description:
+        "Comprehensive REST API built with Node.js and Express.js, featuring automated recurring payments, transaction scheduling using Cron jobs, and merchant payment integration.",
       icon: Cpu,
-      technologies: ["Node.js", "Express.js", "MongoDB", "Cron Jobs", "REST API"],
+      technologies: [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Cron Jobs",
+        "REST API",
+      ],
       features: [
         "Automated payment scheduling",
         "Merchant payment integration",
         "Error handling & validation",
-        "API documentation"
+        "API documentation",
       ],
       githubUrl: "#",
       liveUrl: "#",
-      category: "Backend"
-    }
+      category: "Backend",
+    },
   ];
 
   return (
