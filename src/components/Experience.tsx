@@ -53,35 +53,67 @@ const Experience = () => {
 
   const experiences = [
     {
+      title: "Full Stack Developer Intern",
+      company: "Academic Internship – MMMUT",
+      period: "2025",
+      location: "MMMUT, Gorakhpur",
+      type: "Academic Internship",
+      description:
+        "Contributed as a full stack developer in building Nexus Society — a centralized, full-stack campus society management web application aimed at simplifying and digitalizing society operations. Worked closely with the team to implement secure authentication, responsive user interfaces, real-time communications, and payment integration.",
+      achievements: [
+        "Developed core modules including user authentication, event registration, and merchandise management.",
+        "Integrated Razorpay payment gateway for secure online transactions.",
+        "Implemented password reset and email notification system using Nodemailer.",
+        "Built responsive and interactive UI using Tailwind CSS, Framer Motion, and React Parallax Tilt.",
+        "Used React Hook Form and Redux Toolkit for state and form handling across the application.",
+        "Connected frontend and backend using RESTful APIs built with Express.js and Node.js.",
+        "Managed database schemas and operations using MongoDB and Mongoose.",
+        "Ensured role-based access control with JWT to separate user and admin privileges.",
+        "Collaborated on GitHub and participated in CI/CD automation using GitHub Actions.",
+        "Deployed frontend on Vercel and backend on Render ensuring production readiness.",
+      ],
+      technologies: [
+        "React.js",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Redux Toolkit",
+        "React Hook Form",
+        "React Router DOM",
+        "Recharts",
+        "React Toastify",
+        "Lucide React",
+        "React Parallax Tilt",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "JWT",
+        "Nodemailer",
+        "Razorpay",
+        "Cloudinary",
+        "Vercel",
+        "Render",
+        "GitHub Actions",
+      ],
+    },
+    {
       title: "Java Intern",
-      company: "Intern",
+      company: "InternPe",
       period: "07/2024 - 09/2024",
       location: "Remote",
       type: "Internship",
-      description: "Designed and developed four interactive Java-based applications during internship.",
+      description:
+        "Designed and developed four interactive Java-based applications during internship.",
       achievements: [
         "Guessing Game - Interactive number guessing game with user feedback",
         "Rock-Paper-Scissors - Classic game implementation with clean UI",
         "Tic-Tac-Toe - Two-player game with win detection logic",
-        "Connect Four Game - Strategic board game with advanced algorithms"
+        "Connect Four Game - Strategic board game with advanced algorithms",
       ],
-      technologies: ["Java", "OOP", "Game Development", "Algorithms"]
+      technologies: ["Java", "OOP", "Game Development", "Algorithms"],
     },
-    {
-      title: "Full Stack Developer",
-      company: "Personal Projects",
-      period: "2023 - Present",
-      location: "Self-Directed",
-      type: "Personal Development",
-      description: "Building modern web applications using MERN stack and exploring new technologies.",
-      achievements: [
-        "AI-Powered Budget Management System with MERN Stack",
-        "Chat Authentication system with secure login via GitHub and LinkedIn",
-        "RESTful APIs with Node.js and Express.js",
-        "Real-time transaction management with automated categorization"
-      ],
-      technologies: ["React", "Node.js", "MongoDB", "Express.js", "JWT", "OAuth"]
-    }
   ];
 
   return (
