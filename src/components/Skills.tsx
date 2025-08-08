@@ -1,8 +1,10 @@
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+
 import {
   Code,
   Database,
@@ -15,8 +17,6 @@ import {
   BadgeCheck,
 } from "lucide-react";
 
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
@@ -28,7 +28,8 @@ const Skills = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Title animation
-      gsap.fromTo(titleRef.current, 
+      gsap.fromTo(
+        titleRef.current,
         { opacity: 0, y: 50 },
         {
           opacity: 1,
@@ -38,13 +39,14 @@ const Skills = () => {
           scrollTrigger: {
             trigger: titleRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
 
       // Skills cards animation
-      gsap.fromTo(skillsRef.current?.children || [], 
+      gsap.fromTo(
+        skillsRef.current?.children || [],
         { opacity: 0, y: 30, scale: 0.9 },
         {
           opacity: 1,
@@ -56,13 +58,14 @@ const Skills = () => {
           scrollTrigger: {
             trigger: skillsRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
 
       // Certifications animation
-      gsap.fromTo(certificationsRef.current?.children || [], 
+      gsap.fromTo(
+        certificationsRef.current?.children || [],
         { opacity: 0, x: -50 },
         {
           opacity: 1,
@@ -73,8 +76,8 @@ const Skills = () => {
           scrollTrigger: {
             trigger: certificationsRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
     }, sectionRef);
@@ -152,7 +155,7 @@ const Skills = () => {
         "React Hook Form",
         "zustand",
         "Recharts",
-        "npm"
+        "npm",
       ],
     },
     {
@@ -170,7 +173,7 @@ const Skills = () => {
       description:
         "Successfully completed AWS core services, cloud computing fundamentals",
       icon: BadgeCheck,
-      link: "https://www.learntube.ai/aws-assessment-certificate", // replace with actual link
+      link: "https://drive.google.com/file/d/1D5vo8O-uTXUjto2ED2U4ecDcsmGPFk-U/view?usp=drive_link",
       linkText: "View Certification",
     },
     {
@@ -180,17 +183,17 @@ const Skills = () => {
       description:
         "Oracle SQL course covering queries, data manipulation, database design",
       icon: GraduationCap,
-      link: "https://www.mygreatlearning.com/academy/certificate/ORACLE-SQL", // replace with actual link
+      link: "https://www.mygreatlearning.com/certificate/KTWJFHVC",
       linkText: "Verify Credential",
     },
     {
-      name: "Alpha 5 DSA with Java",
+      name: "Alpha 5.0 DSA with Java",
       issuer: "Apna College",
       date: "2024",
       description:
         "Successfully improved Data Structures and Algorithms using Java",
       icon: BadgeCheck,
-      link: "https://www.apnacollege.in/certificate/dsa-java", // replace with actual link
+      link: "https://drive.google.com/file/d/1SEGnpKHFi8CvlX5i3RAj7fTDKScupJor/view?usp=drive_link",
       linkText: "Show Certificate",
     },
   ];
@@ -204,6 +207,7 @@ const Skills = () => {
         >
           Skills & Expertise
         </h2>
+
         {/* Skills Grid */}
         <div
           ref={skillsRef}
@@ -238,8 +242,8 @@ const Skills = () => {
             </Card>
           ))}
         </div>
+
         {/* Certifications */}
-       
         <div>
           <h3 className="text-3xl font-bold text-center mb-12 text-primary">
             Certifications & Achievements
@@ -281,15 +285,20 @@ const Skills = () => {
                     {cert.description}
                   </p>
                   {cert.link && (
-                    <a
-                      href={cert.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-sm text-blue-600 hover:underline"
+                    <Button
+                      size="sm"
+                      className="bg-primary hover:bg-primary/90 mt-3"
+                      asChild
                     >
-                      <ExternalLink className="w-4 h-4 mr-1" />
-                      {cert.linkText || "View Certificate"}
-                    </a>
+                      <a
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        {cert.linkText || "View Certificate"}
+                      </a>
+                    </Button>
                   )}
                 </CardContent>
               </Card>
