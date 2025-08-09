@@ -1,18 +1,19 @@
-import { useEffect } from 'react';
-import { gsap } from 'gsap';
-import Navigation from '@/components/Navigation';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Experience from '@/components/Experience';
-import Projects from '@/components/Projects';
-import Skills from '@/components/Skills';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import Navigation from "@/components/Navigation";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import Certifications from "@/components/Certifications";
 
 const Index = () => {
   useEffect(() => {
-    // Set initial page load animation
-    gsap.fromTo(document.body, 
+    gsap.fromTo(
+      document.body,
       { opacity: 0 },
       { opacity: 1, duration: 0.8, ease: "power2.out" }
     );
@@ -26,6 +27,7 @@ const Index = () => {
       <Experience />
       <Projects />
       <Skills />
+      <Certifications />
       <Contact />
       <Footer />
     </div>
