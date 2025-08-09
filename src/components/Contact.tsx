@@ -316,19 +316,19 @@ const Contact = () => {
           </div>
 
           {/* Contact Information */}
-          <div ref={contactInfoRef} className="space-y-8">
+          <div ref={contactInfoRef} className="space-y-2">
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-primary">
+              <h3 className="text-2xl font-bold mb-3 text-primary">
                 Contact Information
               </h3>
-              <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+              <p className="text-muted-foreground mb-3 text-lg leading-relaxed">
                 I'm always interested in new opportunities and exciting
-                projects. Whether you have a question or just want to say hi,
+                projects. If you have a question or just want to say hi,
                 feel free to reach out!
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-3">
               {contactInfo.map((info, index) => (
                 <Card
                   key={index}
