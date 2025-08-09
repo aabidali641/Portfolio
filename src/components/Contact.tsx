@@ -167,7 +167,7 @@ const Contact = () => {
       icon: MapPin,
       title: "Location",
       value: "Amroha Uttar Pradesh, India",
-      link: "#",
+      link: "https://www.google.com/maps/place/Amroha,+Uttar+Pradesh/@28.8999797,78.4655889,14z/data=!3m1!4b1!4m6!3m5!1s0x390b080e5a6d11fd:0x77f1b07fe2fe1d55!8m2!3d28.9051778!4d78.467318!16zL20vMDZzeDVo?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D",
     },
   ];
 
