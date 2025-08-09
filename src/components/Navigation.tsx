@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Custom LeetCode Icon
 const LeetCodeIcon = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -18,6 +17,16 @@ const LeetCodeIcon = ({ className }: { className?: string }) => (
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 1050);
+    };
+    handleResize(); // initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,72 +56,83 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold text-gradient">Aabid Ali</div>
+          <div className="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent animate-gradient">
+            Aabid Ali
+          </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="relative text-foreground hover:text-primary transition-colors duration-300 group"
-              >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            ))}
-          </div>
+          {!isMobileView && (
+            <div className="flex items-center space-x-8">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="relative text-foreground hover:text-primary transition-colors duration-300 group"
+                >
+                  {item.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              ))}
+            </div>
+          )}
 
           {/* Social Links */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="icon" asChild>
-              <a
-                href="https://github.com/aabidali641"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a
-                href="https://linkedin.com/in/aabidali641"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a
-                href="https://leetcode.com/u/aabidAli/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LeetCodeIcon className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a href="mailto:mdaabidali28@gmail.com">
-                <Mail className="h-5 w-5" />
-              </a>
-            </Button>
-          </div>
+          {!isMobileView && (
+            <div className="flex items-center space-x-4">
+              <Button variant="ghost" size="icon" asChild>
+                <a
+                  href="https://github.com/aabidali641"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a
+                  href="https://linkedin.com/in/aabidali641"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a
+                  href="https://leetcode.com/u/aabidAli/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LeetCodeIcon className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a href="mailto:mdaabidali28@gmail.com">
+                  <Mail className="h-5 w-5" />
+                </a>
+              </Button>
+            </div>
+          )}
 
           {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          {isMobileView && (
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </Button>
+          )}
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background/90 backdrop-blur-lg border-t border-primary/20 z-50">
+        {isMobileView && isOpen && (
+          <div className="absolute top-full left-0 right-0 bg-background/90 backdrop-blur-lg border-t border-primary/20 z-50">
             <div className="flex flex-col space-y-4 p-6">
               {navItems.map((item) => (
                 <a
