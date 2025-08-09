@@ -54,6 +54,7 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
 
   const achievements = [
     {
+        
       title: "Active Open-Source Project Contributor",
       organization: "GitHub Community",
       date: "2025",
@@ -80,7 +81,11 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-16">
+    <section
+      id="achievements"
+      ref={sectionRef}
+      className=" mt-16 py-0 scroll-mt-24"
+    >
       <div className="container mx-auto px-6 md:px-12 lg:px-8">
         <h3 className="ach-heading text-3xl font-bold text-center mb-12 text-primary">
           Achievements
