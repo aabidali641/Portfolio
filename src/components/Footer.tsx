@@ -13,10 +13,10 @@ const Footer = () => {
               <Heart className="h-4 w-4 text-red-500 fill-current" />
               and
               <Code className="h-4 w-4 text-primary" />
-              using React & GSAP
+              using React, Typescript & GSAP
             </p>
           </div>
-          
+
           <div className="text-muted-foreground text-sm">
             <p>Full Stack Developer • MERN Stack Specialist</p>
           </div>
