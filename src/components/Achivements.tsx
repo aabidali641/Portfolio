@@ -52,25 +52,18 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
 
   const achievements = [
     {
-      title: "Open-Source Contributor",
+      title: "Active Open-Source Project Contributor",
       organization: "GitHub Community",
-      date: "2024",
+      date: "2025",
       description:
         "Contributed to open-source projects showcasing coding, collaboration, and real-world problem-solving skills.",
       icon: Code2,
     },
-    {
-      title: "LeetCode Competitive Programming",
-      organization: "LeetCode",
-      date: "2024",
-      description:
-        "Active competitive coder with strong problem-solving skills and solid contest rankings.",
-      icon: Award,
-    },
+
     {
       title: "First Prize - English Speaking Contest",
-      organization: "Intercollege Cultural Fest",
-      date: "2023",
+      organization: "Howard International Institute Of English Language",
+      date: "2022",
       description:
         "Won first prize for outstanding communication skills and confident stage presence.",
       icon: Mic,
@@ -78,7 +71,7 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
     {
       title: "Anchoring - Juniors’ Fresher’s Party",
       organization: "College Cultural Committee",
-      date: "2023",
+      date: "2025",
       description:
         "Hosted an event with 150+ attendees, showcasing public speaking, event management, and confidence.",
       icon: Users,
