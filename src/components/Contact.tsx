@@ -6,7 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Send, Globe, Code2,  } from 'lucide-react';
 import patternBg from '@/assets/pattern-bg.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -131,33 +131,48 @@ const Contact = () => {
       icon: Mail,
       title: "Email",
       value: "aabidali641@gmail.com",
-      link: "mailto:aabidali641@gmail.com"
+      link: "mailto:mdaabidali28@gmail.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+91 9304649094",
-      link: "tel:+919304649094"
+      value: "+91 9410464794",
+      link: "tel:+919410464794",
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "Azamgarh, UP, India",
-      link: "#"
-    }
+      value: "Amroha,Uttar Pradesh, India",
+      link: "https://www.google.com/maps/place/Amroha,+Uttar+Pradesh/@28.8999797,78.4655889,14z/data=!3m1!4b1!4m6!3m5!1s0x390b080e5a6d11fd:0x77f1b07fe2fe1d55!8m2!3d28.9051778!4d78.467318!16zL20vMDZzeDVo?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D",
+    },
   ];
 
   const socialLinks = [
     {
       icon: Github,
       title: "GitHub",
-      url: "https://github.com/aabidali641"
+      url: "https://github.com/aabidali641",
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
-      url: "https://linkedin.com/in/aabidali641"
-    }
+      url: "https://linkedin.com/in/aabidali641",
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      url: "mailto:mdaabidali28@gmail.com",
+    },
+    {
+      icon: Code2,
+      title: "LeetCode",
+      url: "https://leetcode.com/u/aabidAli/",
+    },
+    {
+      icon: Globe,
+      title: "My Website",
+      url: "https://aabidali641.github.io/", 
+    },
   ];
 
   return (
