@@ -1,5 +1,5 @@
 import React, { forwardRef, useEffect, useRef } from "react";
-import { Code2, Award, Mic, Users } from "lucide-react";
+import { Code2, Mic, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { gsap } from "gsap";
@@ -18,15 +18,16 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
       // Heading animation
       gsap.fromTo(
         heading,
-        { opacity: 0, y: -30 },
+        { opacity: 0, y: -40 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.6,
-          ease: "power2.out",
+          duration: 0.8,
+          ease: "power3.out",
           scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 85%",
+            trigger: heading,
+            start: "top 90%",
+            toggleActions: "play none none reverse",
           },
         }
       );
@@ -34,16 +35,17 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
       // Cards animation
       gsap.fromTo(
         cards,
-        { opacity: 0, y: 50 },
+        { opacity: 0, y: 60 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.6,
-          stagger: 0.2,
-          ease: "power2.out",
+          duration: 0.8,
+          stagger: 0.25,
+          ease: "power3.out",
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 75%",
+            start: "top 85%",
+            toggleActions: "play none none reverse",
           },
         }
       );
@@ -59,7 +61,6 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
         "Contributed to open-source projects showcasing coding, collaboration, and real-world problem-solving skills.",
       icon: Code2,
     },
-
     {
       title: "First Prize - English Speaking Contest",
       organization: "Howard International Institute Of English Language",
