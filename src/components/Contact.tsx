@@ -38,7 +38,6 @@ const Contact = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Title animation
       gsap.fromTo(
         titleRef.current,
         { opacity: 0, y: 50 },
@@ -55,7 +54,6 @@ const Contact = () => {
         }
       );
 
-      // Form animation
       gsap.fromTo(
         formRef.current,
         { opacity: 0, x: -50 },
@@ -72,7 +70,6 @@ const Contact = () => {
         }
       );
 
-      // Contact info animation
       gsap.fromTo(
         contactInfoRef.current,
         { opacity: 0, x: 50 },
@@ -147,9 +144,6 @@ const Contact = () => {
     });
   };
 
-  // Make sure you define your contactInfo and socialLinks arrays somewhere here or import them
-  // Example structure:
-  
   const contactInfo = [
     {
       icon: Mail,
@@ -167,7 +161,7 @@ const Contact = () => {
       icon: MapPin,
       title: "Location",
       value: "Amroha Uttar Pradesh, India",
-      link: "https://www.google.com/maps/place/Amroha,+Uttar+Pradesh/@28.8999797,78.4655889,14z/data=!3m1!4b1!4m6!3m5!1s0x390b080e5a6d11fd:0x77f1b07fe2fe1d55!8m2!3d28.9051778!4d78.467318!16zL20vMDZzeDVo?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D",
+      link: "https://www.google.com/maps/place/Amroha,+Uttar+Pradesh",
     },
   ];
 
@@ -198,7 +192,6 @@ const Contact = () => {
       url: "mailto:mdaabidali28@gmail.com",
     },
   ];
-  
 
   return (
     <section
@@ -206,7 +199,6 @@ const Contact = () => {
       id="contact"
       className="py-20 bg-secondary/10 relative overflow-hidden"
     >
-      {/* Background Pattern */}
       <div
         className="absolute inset-0 opacity-5"
         style={{
@@ -225,7 +217,6 @@ const Contact = () => {
         </h2>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
           <div ref={formRef}>
             <Card className="glass border-primary/20">
               <CardContent className="p-8">
@@ -240,7 +231,6 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="bg-background/50 border-primary/20 focus:border-primary"
                       disabled={loading}
                     />
                     <Input
@@ -250,7 +240,6 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="bg-background/50 border-primary/20 focus:border-primary"
                       disabled={loading}
                     />
                   </div>
@@ -260,7 +249,6 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="bg-background/50 border-primary/20 focus:border-primary"
                     disabled={loading}
                   />
                   <Textarea
@@ -270,70 +258,30 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="bg-background/50 border-primary/20 focus:border-primary resize-none"
                     disabled={loading}
                   />
-
-                  <Button
-                    type="submit"
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground neon-glow flex items-center justify-center"
-                    disabled={loading}
-                  >
-                    {loading ? (
-                      <>
-                        <svg
-                          className="animate-spin h-5 w-5 mr-2 text-black"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                        >
-                          <circle
-                            className="opacity-25"
-                            cx="12"
-                            cy="12"
-                            r="10"
-                            stroke="currentColor"
-                            strokeWidth="4"
-                          ></circle>
-                          <path
-                            className="opacity-75"
-                            fill="currentColor"
-                            d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                          ></path>
-                        </svg>
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="h-4 w-4 mr-2" />
-                        Send Message
-                      </>
-                    )}
+                  <Button type="submit" className="w-full" disabled={loading}>
+                    {loading ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
             </Card>
           </div>
 
-          {/* Contact Information */}
-          <div ref={contactInfoRef} className="space-y-2">
+          <div ref={contactInfoRef} className="space-y-3">
             <div>
-              <h3 className="text-2xl font-bold mb-3 text-primary">
+              <h3 className="text-2xl font-bold mb-4 text-primary">
                 Contact Information
               </h3>
-              <p className="text-muted-foreground mb-3 text-lg leading-relaxed">
+              <p className="text-muted-foreground mb-5">
                 I'm always interested in new opportunities and exciting
-                projects. If you have a question or just want to say hi,
-                feel free to reach out!
+                projects. Feel free to reach out!
               </p>
             </div>
 
             <div className="space-y-3">
               {contactInfo.map((info, index) => (
-                <Card
-                  key={index}
-                  className="glass border-primary/20 hover:border-primary/40 transition-all duration-300"
-                >
+                <Card key={index} className="glass border-primary/20">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4">
                       <div className="p-3 bg-primary/10 rounded-lg">
@@ -343,48 +291,45 @@ const Contact = () => {
                         <h4 className="font-semibold text-primary">
                           {info.title}
                         </h4>
-                        {info.link !== "#" ? (
-                          <a
-                            href={info.link}
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                          >
-                            {info.value}
-                          </a>
-                        ) : (
-                          <span className="text-muted-foreground">
-                            {info.value}
-                          </span>
-                        )}
+                        <a
+                          href={info.link}
+                          className="text-muted-foreground hover:text-primary"
+                        >
+                          {info.value}
+                        </a>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
               ))}
             </div>
+          </div>
+        </div>
 
-            <div>
-              <h4 className="font-semibold mb-4 text-primary">Follow Me</h4>
-              <div className="flex gap-4">
-                {socialLinks.map((social, index) => (
-                  <Button
-                    key={index}
-                    variant="outline"
-                    size="icon"
-                    className="border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground hover:neon-glow"
-                    asChild
-                  >
-                    <a
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title={social.title}
-                    >
-                      <social.icon className="h-5 w-5" />
-                    </a>
-                  </Button>
-                ))}
-              </div>
-            </div>
+        {/* Follow Me - Centered Below */}
+        <div className="mt-16 text-center">
+          <h4 className="font-semibold mb-6 text-primary text-2xl">
+            Follow Me
+          </h4>
+          <div className="flex justify-center gap-6">
+            {socialLinks.map((social, index) => (
+              <Button
+                key={index}
+                variant="outline"
+                size="icon"
+                className="border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
+                asChild
+              >
+                <a
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={social.title}
+                >
+                  <social.icon className="h-6 w-6" />
+                </a>
+              </Button>
+            ))}
           </div>
         </div>
       </div>
