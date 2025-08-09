@@ -17,6 +17,12 @@ interface ContactEmailRequest {
   message: string;
 }
 
+// Simple email validation function
+function isValidEmail(email: string): boolean {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
 const handler = async (req: Request): Promise<Response> => {
   // Preflight
   if (req.method === "OPTIONS") {
@@ -44,6 +50,14 @@ const handler = async (req: Request): Promise<Response> => {
           headers: { "Content-Type": "application/json", ...corsHeaders },
         }
       );
+    }
+
+    // Validate email format
+    if (!isValidEmail(email)) {
+      return new Response(JSON.stringify({ error: "Invalid email address" }), {
+        status: 400,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      });
     }
 
     const supabaseUrl = Deno.env.get("SUPABASE_URL");
@@ -75,15 +89,16 @@ const handler = async (req: Request): Promise<Response> => {
       });
     }
 
-    // Optional: send emails using Resend if API key present
+    // Send emails using Resend if API key present
     const resendApiKey = Deno.env.get("RESEND_API_KEY");
     if (resendApiKey) {
-      try {
-        const resend = new Resend(resendApiKey);
+      const resend = new Resend(resendApiKey);
 
+      try {
+        // Mail to yourself (portfolio owner)
         await resend.emails.send({
-          from: "Portfolio Contact <onboarding@resend.dev>",
-          to: ["mdaabidali28@gmail.com"], // your personal email
+          from: "Portfolio Contact <onboarding@resend.dev>", // Change to your verified email if needed
+          to: ["mdaabidali28@gmail.com"],
           subject: `New Contact Form Message: ${subject}`,
           html: `
             <h2>New Contact Form Submission</h2>
@@ -95,24 +110,39 @@ const handler = async (req: Request): Promise<Response> => {
             </div>
           `,
         });
+        console.log("Owner notification email sent.");
+      } catch (ownerMailError) {
+        console.error("Failed to send mail to owner:", ownerMailError);
+      }
 
-        // confirmation to sender
+      try {
+        // Confirmation mail to user
         await resend.emails.send({
-          from: "Aabid Ali <onboarding@resend.dev>",
+          from: "Aabid Ali <mdaabidali28@gmail.com>", // <-- yahan apna verified email daalo
           to: [email],
           subject: "Thank you for contacting me!",
           html: `
-            <h2>Thank you for your message, ${name}!</h2>
-            <p>I have received your message regarding "<strong>${subject}</strong>".</p>
-            <div style="background:#f5f5f5;padding:15px;border-radius:5px;">
-              ${message.replace(/\n/g, "<br>")}
+            <div style="font-family: Arial, sans-serif; color: #333;">
+              <h2 style="color: #2c3e50;">Thank you for your message, ${name}!</h2>
+              <p>I have received your message regarding "<strong>${subject}</strong>".</p>
+              <p style="margin-top: 15px;">Here’s what you sent:</p>
+              <div style="background:#f5f5f5;padding:15px;border-radius:5px;white-space:pre-line;">
+                ${message}
+              </div>
+              <p style="margin-top: 20px;">I will get back to you shortly.</p>
+              <p>— Aabid Ali</p>
             </div>
           `,
         });
-      } catch (emailError) {
-        console.error("Email sending failed:", emailError);
-        // don't fail overall request — message saved to DB
+        console.log("Confirmation email sent to user:", email);
+      } catch (confirmationMailError) {
+        console.error(
+          "Confirmation email sending failed:",
+          confirmationMailError
+        );
       }
+    } else {
+      console.warn("RESEND_API_KEY is missing, emails not sent.");
     }
 
     return new Response(
