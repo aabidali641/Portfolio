@@ -3,7 +3,7 @@ import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // Custom LeetCode Icon
-const LeetCodeIcon = ({ className }) => (
+const LeetCodeIcon = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 50 50"
@@ -110,7 +110,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 glass backdrop-blur-lg border-t border-primary/20">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background/90 backdrop-blur-lg border-t border-primary/20 z-50">
             <div className="flex flex-col space-y-4 p-6">
               {navItems.map((item) => (
                 <a
