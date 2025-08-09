@@ -133,7 +133,9 @@ const Hero = () => {
 
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <h1 ref={titleRef} className="text-5xl md:text-7xl font-bold mb-6">
-          <span className="text-gradient">Aabid Ali</span>
+          <span className="text-gradient bg-gradient-to-r from-blue-400 via-teal-300 to-purple-400">
+            Aabid Ali
+          </span>
         </h1>
 
         <p
