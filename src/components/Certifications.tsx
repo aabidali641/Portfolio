@@ -85,7 +85,11 @@ const Certifications = forwardRef<HTMLDivElement>((_, ref) => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-0">
+    <section
+      id="certifications"
+      ref={sectionRef}
+      className=" py-0 scroll-mt-24"
+    >
       <div className="container mx-auto px-6 md:px-12 lg:px-8">
         <h3 className="cert-heading text-3xl font-bold text-center mb-12 text-primary">
           Certifications
