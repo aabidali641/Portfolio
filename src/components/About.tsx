@@ -1,8 +1,8 @@
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Card, CardContent } from '@/components/ui/card';
-import { GraduationCap, Code, Users, Award } from 'lucide-react';
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Card, CardContent } from "@/components/ui/card";
+import { GraduationCap, Code, Users, Award } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,7 +15,8 @@ const About = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Title animation
-      gsap.fromTo(titleRef.current, 
+      gsap.fromTo(
+        titleRef.current,
         { opacity: 0, y: 50 },
         {
           opacity: 1,
@@ -25,13 +26,14 @@ const About = () => {
           scrollTrigger: {
             trigger: titleRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
 
       // Content animation
-      gsap.fromTo(contentRef.current, 
+      gsap.fromTo(
+        contentRef.current,
         { opacity: 0, x: -50 },
         {
           opacity: 1,
@@ -41,13 +43,14 @@ const About = () => {
           scrollTrigger: {
             trigger: contentRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
 
       // Stats cards animation
-      gsap.fromTo(statsRef.current?.children || [], 
+      gsap.fromTo(
+        statsRef.current?.children || [],
         { opacity: 0, y: 30, scale: 0.9 },
         {
           opacity: 1,
@@ -59,8 +62,8 @@ const About = () => {
           scrollTrigger: {
             trigger: statsRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
     }, sectionRef);
@@ -73,26 +76,26 @@ const About = () => {
       icon: GraduationCap,
       title: "Education",
       value: "Master's Degree",
-      description: "Information technology & Computer Applications"
+      description: "Information technology & Computer Applications",
     },
     {
       icon: Code,
       title: "Experience",
       value: "1+ Years",
-      description: "Development Experience"
+      description: "Development Experience",
     },
     {
       icon: Users,
-      title: "Projects",
+      title: "Web",
       value: "10+ Projects",
-      description: "Completed Successfully"
+      description: "Developed Successfully",
     },
     {
       icon: Award,
       title: "Certifications",
       value: "3+ Certificates",
-      description: "AWS, Oracle(SQL), DSA With Java"
-    }
+      description: "AWS, Oracle(SQL), DSA With Java",
+    },
   ];
 
   return (
@@ -100,7 +103,7 @@ const About = () => {
       <div className="container mx-auto px-6">
         <h2
           ref={titleRef}
-          className="text-4xl md:text-5xl font-bold text-center mb-16 text-gradient"
+          className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 via-teal-300 to-purple-400 bg-clip-text text-transparent"
         >
           About Me
         </h2>
@@ -117,7 +120,7 @@ const About = () => {
                 University of Technology (MMMUT), Gorakhpur. My passion for
                 software development is fueled by curiosity, creativity, and a
                 drive to craft meaningful digital solutions. Specializing in
-                Java, React,Next.js, Typescript, GSAP, Node.js, and the MERN
+                Java, React, Next.js, Typescript, GSAP, Node.js, and the MERN
                 stack, I excel at building robust, scalable, and
                 performance-optimized web applications. My core strength lies in
                 transforming real-world challenges into interactive,
@@ -154,7 +157,9 @@ const About = () => {
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Specialization</span>
-                <span className="font-medium">Information Technology And Computer Applications</span>
+                <span className="font-medium">
+                  Information Technology And Computer Applications
+                </span>
               </div>
             </div>
           </div>
