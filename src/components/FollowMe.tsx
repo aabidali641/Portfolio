@@ -33,7 +33,7 @@ const socialLinks = [
 export default function FollowMe() {
   return (
     <div className="mt-0 text-center px-4 sm:px-6 md:px-8 max-w-5xl mx-auto">
-      <h4 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-8 text-gradient">
+      <h4 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 sm:mb-8 text-gradient">
         <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
           Follow Me
         </span>
