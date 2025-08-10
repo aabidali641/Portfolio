@@ -259,32 +259,38 @@ const Contact = () => {
             </Card>
           </div>
 
-          <div ref={contactInfoRef} className="space-y-3">
+          <div
+            ref={contactInfoRef}
+            className="space-y-6 max-w-xl mx-auto px-4 sm:px-6 md:px-0"
+          >
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-primary">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-primary text-center md:text-left">
                 Contact Information
               </h3>
-              <p className="text-muted-foreground mb-5">
+              <p className="text-muted-foreground mb-6 text-center md:text-left text-base sm:text-lg leading-relaxed">
                 I'm always interested in new opportunities and exciting
                 projects. Feel free to reach out!
               </p>
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-4">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="glass border-primary/20">
-                  <CardContent className="p-6">
+                <Card
+                  key={index}
+                  className="glass border-primary/20 hover:shadow-lg transition-shadow duration-300"
+                >
+                  <CardContent className="p-5 sm:p-6">
                     <div className="flex items-center gap-4">
-                      <div className="p-3 bg-primary/10 rounded-lg">
-                        <info.icon className="h-6 w-6 text-primary" />
+                      <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
+                        <info.icon className="h-6 w-6 sm:h-7 sm:w-7 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-primary">
+                        <h4 className="font-semibold text-primary text-lg sm:text-xl">
                           {info.title}
                         </h4>
                         <a
                           href={info.link}
-                          className="text-muted-foreground hover:text-primary"
+                          className="text-muted-foreground hover:text-primary break-all text-sm sm:text-base"
                         >
                           {info.value}
                         </a>
