@@ -87,8 +87,10 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
       className=" mt-16 py-0 scroll-mt-24"
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-8">
-        <h3 className="ach-heading text-3xl font-bold text-center mb-12 text-primary">
-          Achievements
+        <h3 className="text-5xl md:text-7xl font-bold mb-16 text-center text-gradient">
+          <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
+            Achievements
+          </span>
         </h3>
         <div ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {achievements.map((ach, index) => (
