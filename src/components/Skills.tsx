@@ -170,9 +170,11 @@ const Skills = () => {
       <div className="container mx-auto px-6">
         <h2
           ref={titleRef}
-          className="text-4xl md:text-5xl font-bold text-center mb-16 text-gradient"
+          className="text-5xl md:text-6xl font-bold mb-16 text-center text-gradient"
         >
-          Skills & Expertise
+          <span className="bg-gradient-to-r from-blue-400 via-teal-300 to-purple-400 bg-clip-text text-transparent">
+            Skills & Technologies
+          </span>
         </h2>
 
         {/* Skills Grid */}
@@ -209,8 +211,6 @@ const Skills = () => {
             </Card>
           ))}
         </div>
-
-       
       </div>
     </section>
   );
