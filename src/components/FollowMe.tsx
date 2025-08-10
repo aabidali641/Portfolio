@@ -58,7 +58,7 @@ export default function FollowMe() {
         }
       );
 
-      // Animate buttons: fade in + scale up staggered
+      
       if (buttonsRef.current) {
         gsap.fromTo(
           buttonsRef.current.children,
