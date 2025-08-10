@@ -218,7 +218,7 @@ const Contact = () => {
           </span>
         </h2>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
           <div ref={formRef}>
             <Card className="glass border-primary/20">
               <CardContent className="p-8">
@@ -263,7 +263,7 @@ const Contact = () => {
                     disabled={loading}
                   />
                   <Button type="submit" className="w-full" disabled={loading}>
-                    {loading ? "Sending..." : "Send Message"}
+                    {loading ? "Sending..." : " Send Message"}
                   </Button>
                 </form>
               </CardContent>
