@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Award, ExternalLink, BadgeCheck, GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,47 +8,51 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Certifications = forwardRef<HTMLDivElement>((_, ref) => {
-  const sectionRef = useRef<HTMLDivElement>(null);
+const Certifications = React.forwardRef<HTMLDivElement>((_, ref) => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (sectionRef.current) {
-      const heading = sectionRef.current.querySelector(".cert-heading");
-      const cards = sectionRef.current.querySelectorAll(".cert-card");
-
-      // Heading animation
+    const ctx = gsap.context(() => {
+      // Title animation
       gsap.fromTo(
-        heading,
-        { opacity: 0, y: -30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 85%",
-          },
-        }
-      );
-
-      // Cards animation
-      gsap.fromTo(
-        cards,
+        titleRef.current,
         { opacity: 0, y: 50 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.6,
-          stagger: 0.2,
-          ease: "power2.out",
+          duration: 1,
+          ease: "power3.out",
           scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 75%",
+            trigger: titleRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
           },
         }
       );
-    }
+
+      // Cards animation (fade + translateY + scale)
+      gsap.fromTo(
+        cardsRef.current?.children || [],
+        { opacity: 0, y: 30, scale: 0.9 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          ease: "power3.out",
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: cardsRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
   }, []);
 
   const certifications = [
@@ -85,23 +89,25 @@ const Certifications = forwardRef<HTMLDivElement>((_, ref) => {
   ];
 
   return (
-    <section
-      id="certifications"
-      ref={sectionRef}
-      className=" py-0 scroll-mt-24"
-    >
+    <section id="certifications" ref={sectionRef} className="py-20">
       <div className="container mx-auto px-6 md:px-12 lg:px-8">
-        <h3 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-12 sm:mb-16 text-center text-gradient">
+        <h3
+          ref={titleRef}
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-16 text-center text-gradient"
+        >
           <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
             Certifications
           </span>
         </h3>
 
-        <div ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          ref={cardsRef}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           {certifications.map((cert, index) => (
             <Card
               key={index}
-              className="cert-card glass border-primary/20 hover:border-primary/40 transition-all duration-300 hover:neon-glow"
+              className="glass border-primary/20 hover:border-primary/40 transition-all duration-300 hover:neon-glow"
             >
               <CardContent className="p-6">
                 <div className="flex items-start gap-3 mb-4">
