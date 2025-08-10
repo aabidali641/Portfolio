@@ -11,22 +11,19 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (sectionRef.current) {
-      const heading = sectionRef.current.querySelector(".ach-heading");
-      const cards = sectionRef.current.querySelectorAll(".ach-card");
-
+    const ctx = gsap.context(() => {
       // Heading animation
       gsap.fromTo(
-        heading,
-        { opacity: 0, y: -40 },
+        sectionRef.current?.querySelector("h3"),
+        { opacity: 0, y: 50 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.8,
+          duration: 1,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: heading,
-            start: "top 90%",
+            trigger: sectionRef.current,
+            start: "top 80%",
             toggleActions: "play none none reverse",
           },
         }
@@ -34,27 +31,29 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
 
       // Cards animation
       gsap.fromTo(
-        cards,
-        { opacity: 0, y: 60 },
+        sectionRef.current?.querySelectorAll(".ach-card") || [],
+        { opacity: 0, y: 30, scale: 0.9 },
         {
           opacity: 1,
           y: 0,
+          scale: 1,
           duration: 0.8,
-          stagger: 0.25,
           ease: "power3.out",
+          stagger: 0.1,
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 85%",
+            start: "top 80%",
             toggleActions: "play none none reverse",
           },
         }
       );
-    }
+    }, sectionRef);
+
+    return () => ctx.revert();
   }, []);
 
   const achievements = [
     {
-        
       title: "Active Open-Source Project Contributor",
       organization: "GitHub Community",
       date: "2025",
@@ -84,7 +83,7 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
     <section
       id="achievements"
       ref={sectionRef}
-      className=" mt-16 py-0 scroll-mt-24"
+      className="mt-16 py-0 scroll-mt-24"
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-8">
         <h3 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-12 sm:mb-16 text-center text-gradient">
