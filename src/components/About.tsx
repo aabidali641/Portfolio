@@ -15,7 +15,7 @@ const About = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Title animation
+      
       gsap.fromTo(
         titleRef.current,
         { opacity: 0, y: 50 },
@@ -32,7 +32,7 @@ const About = () => {
         }
       );
 
-      // Content animation
+      
       gsap.fromTo(
         contentRef.current,
         { opacity: 0, x: -50 },
@@ -49,7 +49,7 @@ const About = () => {
         }
       );
 
-      // Stats cards animation
+      
       gsap.fromTo(
         statsRef.current?.children || [],
         { opacity: 0, y: 30, scale: 0.9 },
