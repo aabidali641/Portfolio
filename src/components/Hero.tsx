@@ -145,7 +145,7 @@ const Hero = () => {
           Full Stack Developer
         </p>
 
-        <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-xs sm:max-w-xl md:max-w-2xl mx-auto px-4 sm:px-6">
           Java & MERN Stack Specialist | AI-Enhanced And Scalable Web
           Applications | Bridging Intelligent Systems with Modern UI/UX | MCA
           Postgraduate | Passionate About Building Future-Ready Digital
@@ -190,12 +190,12 @@ const Hero = () => {
           </Button>
         </div>
 
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4 sm:px-0">
           {/* Cover Letter Button */}
           <Button
             variant="outline"
             size="lg"
-            className={buttonStyle}
+            className={`${buttonStyle} w-full sm:w-auto`}
             onClick={() =>
               handleDownload(
                 "https://raw.githubusercontent.com/aabidali641/My-Documents/main/Cover%20Letter.pdf",
@@ -221,7 +221,7 @@ const Hero = () => {
           <Button
             variant="outline"
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg neon-glow"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg neon-glow w-full sm:w-auto"
             onClick={() =>
               handleDownload(
                 "https://raw.githubusercontent.com/aabidali641/My-Documents/main/Foreign%20CV.pdf",
