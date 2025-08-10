@@ -60,7 +60,7 @@ const Navigation = () => {
             Aabid Ali
           </div>
 
-          {/* Desktop Navigation */}
+       
           {!isMobileView && (
             <div className="flex items-center space-x-8">
               {navItems.map((item) => (
@@ -76,7 +76,7 @@ const Navigation = () => {
             </div>
           )}
 
-          {/* Social Links */}
+         
           {!isMobileView && (
             <div className="flex items-center space-x-4">
               <Button variant="ghost" size="icon" asChild>
@@ -130,7 +130,7 @@ const Navigation = () => {
           )}
         </div>
 
-        {/* Mobile Navigation */}
+        
         {isMobileView && isOpen && (
           <div className="absolute top-full left-0 right-0 bg-background/90 backdrop-blur-lg border-t border-primary/20 z-50">
             <div className="flex flex-col space-y-4 p-6">
