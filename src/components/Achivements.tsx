@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Tilt from "react-parallax-tilt";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,11 +87,26 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
       className="mt-16 py-0 scroll-mt-24"
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-8">
-        <h3 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-12 sm:mb-16 text-center text-gradient">
-          <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
-            Achievements
-          </span>
-        </h3>
+        {/* Tilt on Title */}
+        <Tilt
+          tiltEnable={true}
+          glareEnable={true}
+          glareMaxOpacity={0.25}
+          glareColor="white"
+          glarePosition="bottom"
+          glareBorderRadius="1rem"
+          scale={1.5}
+          transitionSpeed={900}
+          tiltMaxAngleX={25}
+          tiltMaxAngleY={25}
+          className="block mx-auto max-w-max mb-12 sm:mb-16"
+        >
+          <h3 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gradient text-center">
+            <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
+              Achievements
+            </span>
+          </h3>
+        </Tilt>
 
         <div ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {achievements.map((ach, index) => (
