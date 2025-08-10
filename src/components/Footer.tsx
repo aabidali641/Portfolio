@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Heart, Code } from "lucide-react";
 import { gsap } from "gsap";
 
