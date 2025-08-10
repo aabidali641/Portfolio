@@ -15,6 +15,7 @@ import {
   Send,
   Globe,
   Twitter,
+  Loader2,
 } from "lucide-react";
 import patternBg from "@/assets/pattern-bg.jpg";
 
@@ -262,8 +263,22 @@ const Contact = () => {
                     rows={5}
                     disabled={loading}
                   />
-                  <Button type="submit" className="w-full" disabled={loading}>
-                    {loading ? "Sending..." : " Send Message"}
+                  <Button
+                    type="submit"
+                    className="w-full flex items-center justify-center gap-2"
+                    disabled={loading}
+                  >
+                    {loading ? (
+                      <>
+                        <Loader2 className="animate-spin h-5 w-5" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="h-5 w-5" />
+                        Send Message
+                      </>
+                    )}
                   </Button>
                 </form>
               </CardContent>
