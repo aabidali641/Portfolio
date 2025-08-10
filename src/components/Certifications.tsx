@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import Tilt from "react-parallax-tilt";
 import { Award, ExternalLink, BadgeCheck, GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -91,69 +92,91 @@ const Certifications = React.forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <section id="certifications" ref={sectionRef} className="py-20">
       <div className="container mx-auto px-6 md:px-12 lg:px-8">
-        <h3
-          ref={titleRef}
-          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-16 text-center text-gradient"
+        <Tilt
+          tiltEnable={true}
+          glareEnable={true}
+          glareMaxOpacity={0.25}
+          glareColor="white"
+          glarePosition="bottom"
+          glareBorderRadius="1rem"
+          scale={1.5}
+          transitionSpeed={900}
+          tiltMaxAngleX={25}
+          tiltMaxAngleY={25}
+          className="block mx-auto max-w-max"
         >
-          <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
-            Certifications
-          </span>
-        </h3>
+          <h3
+            ref={titleRef}
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-16 text-gradient text-center"
+            style={{ width: "max-content" }}
+          >
+            <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
+              Certifications
+            </span>
+          </h3>
+        </Tilt>
 
         <div
           ref={cardsRef}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {certifications.map((cert, index) => (
-            <Card
+            <Tilt
               key={index}
-              className="glass border-primary/20 hover:border-primary/40 transition-all duration-300 hover:neon-glow"
+              tiltMaxAngleX={15}
+              tiltMaxAngleY={20}
+              glareEnable={true}
+              glareMaxOpacity={0.15}
+              className="rounded-lg"
             >
-              <CardContent className="p-6">
-                <div className="flex items-start gap-3 mb-4">
-                  <div className="p-2 bg-primary/10 rounded-lg flex-shrink-0">
-                    {cert.icon ? (
-                      <cert.icon className="h-5 w-5 text-primary" />
-                    ) : (
-                      <Award className="h-5 w-5 text-primary" />
-                    )}
+              <Card className="glass border-primary/20 hover:border-primary/40 transition-all duration-300 hover:neon-glow cursor-pointer">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="p-2 bg-primary/10 rounded-lg flex-shrink-0">
+                      {cert.icon ? (
+                        <cert.icon className="h-5 w-5 text-primary" />
+                      ) : (
+                        <Award className="h-5 w-5 text-primary" />
+                      )}
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-primary mb-1 text-xl">
+                        {cert.name}
+                      </h4>
+                      <p className="text-sm text-muted-foreground mb-1">
+                        {cert.issuer}
+                      </p>
+                      <Badge
+                        variant="outline"
+                        className="text-xs border-primary/30"
+                      >
+                        {cert.date}
+                      </Badge>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-primary mb-1 text-xl">
-                      {cert.name}
-                    </h4>
-                    <p className="text-sm text-muted-foreground mb-1">
-                      {cert.issuer}
-                    </p>
-                    <Badge
-                      variant="outline"
-                      className="text-xs border-primary/30"
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-2">
+                    {cert.description}
+                  </p>
+                  {cert.link && (
+                    <Button
+                      size="sm"
+                      className="bg-primary hover:bg-primary/90 mt-3"
+                      asChild
                     >
-                      {cert.date}
-                    </Badge>
-                  </div>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-2">
-                  {cert.description}
-                </p>
-                {cert.link && (
-                  <Button
-                    size="sm"
-                    className="bg-primary hover:bg-primary/90 mt-3"
-                    asChild
-                  >
-                    <a
-                      href={cert.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      {cert.linkText || "View Certificate"}
-                    </a>
-                  </Button>
-                )}
-              </CardContent>
-            </Card>
+                      <a
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center"
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        {cert.linkText || "View Certificate"}
+                      </a>
+                    </Button>
+                  )}
+                </CardContent>
+              </Card>
+            </Tilt>
           ))}
         </div>
       </div>
