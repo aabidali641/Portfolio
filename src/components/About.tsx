@@ -168,14 +168,17 @@ const About = () => {
           </div>
         </div>
 
-        <div ref={statsRef} className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          ref={statsRef}
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4 sm:px-6"
+        >
           {stats.map((stat, index) => (
             <Card
               key={index}
               className="glass border-primary/20 hover:border-primary/40 transition-all duration-300 hover:neon-glow"
             >
               <CardContent className="p-6 text-center">
-                <stat.icon className="h-8 w-8 mx-auto mb-4 text-primary" />
+                <stat.icon className="h-10 w-10 mx-auto mb-4 text-primary" />
                 <h4 className="text-2xl font-bold text-primary mb-2">
                   {stat.value}
                 </h4>
