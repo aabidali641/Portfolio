@@ -16,7 +16,7 @@ const Certifications = React.forwardRef<HTMLDivElement>((_, ref) => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Title animation
+    
       gsap.fromTo(
         titleRef.current,
         { opacity: 0, y: 50 },
@@ -33,7 +33,7 @@ const Certifications = React.forwardRef<HTMLDivElement>((_, ref) => {
         }
       );
 
-      // Cards animation (fade + translateY + scale)
+      
       gsap.fromTo(
         cardsRef.current?.children || [],
         { opacity: 0, y: 30, scale: 0.9 },
