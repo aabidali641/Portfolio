@@ -1,21 +1,11 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Tilt from "react-parallax-tilt";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 
-import {
-  Code,
-  Database,
-  Globe,
-  Wrench,
-  Award,
-  Cloud,
-  GraduationCap,
-  ExternalLink,
-  BadgeCheck,
-} from "lucide-react";
+import { Code, Database, Globe, Wrench, Cloud } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,7 +13,6 @@ const Skills = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
-  const certificationsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -57,24 +46,6 @@ const Skills = () => {
           stagger: 0.1,
           scrollTrigger: {
             trigger: skillsRef.current,
-            start: "top 80%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-
-      // Certifications animation
-      gsap.fromTo(
-        certificationsRef.current?.children || [],
-        { opacity: 0, x: -50 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          stagger: 0.1,
-          scrollTrigger: {
-            trigger: certificationsRef.current,
             start: "top 80%",
             toggleActions: "play none none reverse",
           },
@@ -145,7 +116,7 @@ const Skills = () => {
         "JWT",
         "OAuth",
         "Cron Jobs",
-        "cloudinary",
+        "Cloudinary",
         "Nodemailer",
         "Razorpay",
         "Render",
@@ -153,7 +124,7 @@ const Skills = () => {
         "Clerk",
         "Redux Toolkit",
         "React Hook Form",
-        "zustand",
+        "Zustand",
         "Recharts",
         "npm",
       ],
@@ -168,14 +139,28 @@ const Skills = () => {
   return (
     <section ref={sectionRef} id="skills" className="py-20">
       <div className="container mx-auto px-6">
-        <h2
-          ref={titleRef}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-12 sm:mb-16 text-center text-gradient"
+        <Tilt
+          tiltEnable={true}
+          glareEnable={true}
+          glareMaxOpacity={0.25}
+          glareColor="white"
+          glarePosition="bottom"
+          glareBorderRadius="1rem"
+          scale={1.5}
+          transitionSpeed={900}
+          tiltMaxAngleX={25}
+          tiltMaxAngleY={25}
+          className="block mx-auto max-w-max cursor-pointer mb-12 sm:mb-16"
         >
-          <span className="bg-gradient-to-r from-blue-400 via-teal-300 to-purple-400 bg-clip-text text-transparent">
-            Skills & Technologies
-          </span>
-        </h2>
+          <h2
+            ref={titleRef}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-gradient"
+          >
+            <span className="bg-gradient-to-r from-blue-400 via-teal-300 to-purple-400 bg-clip-text text-transparent">
+              Skills & Technologies
+            </span>
+          </h2>
+        </Tilt>
 
         {/* Skills Grid */}
         <div
