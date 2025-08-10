@@ -173,7 +173,7 @@ const Contact = () => {
       ></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Tilt on Title */}
+        
         <Tilt
           tiltEnable={true}
           glareEnable={true}
