@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Code, Users, Award } from "lucide-react";
+import Tilt from "react-parallax-tilt";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,14 +102,28 @@ const About = () => {
   return (
     <section ref={sectionRef} id="about" className="py-20 bg-secondary/20">
       <div className="container mx-auto px-6">
-        <h2
-          ref={titleRef}
-          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-12 sm:mb-16 text-center text-gradient"
+        <Tilt
+          tiltEnable={true}
+          glareEnable={true}
+          glareMaxOpacity={0.25}
+          glareColor="white"
+          glarePosition="bottom"
+          glareBorderRadius="1rem"
+          scale={1.5}
+          transitionSpeed={900}
+          tiltMaxAngleX={25}
+          tiltMaxAngleY={25}
+          className="block mx-auto max-w-max"
         >
-          <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
-            About Me
-          </span>
-        </h2>
+          <h2
+            ref={titleRef}
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-12 sm:mb-16 text-gradient cursor-pointer"
+          >
+            <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
+              About Me
+            </span>
+          </h2>
+        </Tilt>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div ref={contentRef} className="space-y-6">
