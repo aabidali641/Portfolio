@@ -41,7 +41,7 @@ export default function FollowMe() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animate title: fade in + slide up
+      
       gsap.fromTo(
         titleRef.current,
         { opacity: 0, y: 50 },
