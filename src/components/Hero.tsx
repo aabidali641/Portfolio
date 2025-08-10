@@ -141,10 +141,10 @@ const Hero = () => {
           glareColor="white"
           glarePosition="bottom"
           glareBorderRadius="1rem"
-          scale={1.05}
-          transitionSpeed={400}
-          tiltMaxAngleX={15}
-          tiltMaxAngleY={15}
+          scale={1.5}
+          transitionSpeed={900}
+          tiltMaxAngleX={25}
+          tiltMaxAngleY={25}
           className="inline-block"
         >
           <h1
