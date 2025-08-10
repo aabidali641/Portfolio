@@ -260,17 +260,19 @@ const Projects = () => {
   return (
     <section ref={sectionRef} id="projects" className="py-20 bg-secondary/10">
       <div className="container mx-auto px-6">
-        <h2 
+        <h2
           ref={titleRef}
-          className="text-4xl md:text-5xl font-bold text-center mb-16 text-gradient"
+          className="text-5xl md:text-7xl font-bold mb-16 text-center text-gradient"
         >
-          Featured Projects
+          <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
+            Featured Projects
+          </span>
         </h2>
-        
+
         <div ref={projectsRef} className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="glass border-primary/20 hover:border-primary/40 transition-all duration-300 hover:neon-glow group"
             >
               <CardHeader>
@@ -278,7 +280,10 @@ const Projects = () => {
                   <div className="p-3 bg-primary/10 rounded-lg">
                     <project.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <Badge variant="outline" className="border-primary/30 text-primary">
+                  <Badge
+                    variant="outline"
+                    className="border-primary/30 text-primary"
+                  >
                     {project.category}
                   </Badge>
                 </div>
@@ -286,24 +291,28 @@ const Projects = () => {
                   {project.title}
                 </CardTitle>
               </CardHeader>
-              
+
               <CardContent className="space-y-6">
                 <p className="text-muted-foreground leading-relaxed">
                   {project.description}
                 </p>
-                
+
                 <div>
-                  <h4 className="font-semibold mb-3 text-primary">Key Features:</h4>
+                  <h4 className="font-semibold mb-3 text-primary">
+                    Key Features:
+                  </h4>
                   <ul className="space-y-2">
                     {project.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-sm text-muted-foreground">{feature}</span>
+                        <span className="text-sm text-muted-foreground">
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, i) => (
                     <Badge key={i} variant="secondary" className="text-xs">
@@ -311,25 +320,33 @@ const Projects = () => {
                     </Badge>
                   ))}
                 </div>
-                
+
                 <div className="flex gap-4 pt-4">
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
+                  <Button
+                    variant="outline"
+                    size="sm"
                     className="border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
                     asChild
                   >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Github className="h-4 w-4 mr-2" />
                       Code
                     </a>
                   </Button>
-                  <Button 
-                    size="sm" 
+                  <Button
+                    size="sm"
                     className="bg-primary hover:bg-primary/90"
                     asChild
                   >
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <ExternalLink className="h-4 w-4 mr-2" />
                       Live Demo
                     </a>
