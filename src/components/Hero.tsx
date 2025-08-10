@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import Tilt from "react-parallax-tilt"; // Already imported
+import Tilt from "react-parallax-tilt"; 
 import {
   ChevronDown,
   Download,
@@ -133,7 +133,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-background/70 backdrop-blur-sm"></div>
 
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-        {/* Wrap your h1 with Tilt for parallax effect on hover */}
+       
         <Tilt
           tiltEnable={true}
           glareEnable={true}
@@ -236,7 +236,7 @@ const Hero = () => {
             )}
           </Button>
 
-          {/* Download Foreign CV Button */}
+          
           <Button
             variant="outline"
             size="lg"
