@@ -10,6 +10,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Certifications from "@/components/Certifications";
 import Achievements from "@/components/Achivements";
+import SocialLinks from "@/components/FollowMe";
 
 const Index = () => {
   useEffect(() => {
@@ -31,6 +32,7 @@ const Index = () => {
       <Certifications />
       <Achievements />
       <Contact />
+      <SocialLinks />
       <Footer />
     </div>
   );
