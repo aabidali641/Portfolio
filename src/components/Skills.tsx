@@ -16,7 +16,7 @@ const Skills = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Title animation
+      
       gsap.fromTo(
         titleRef.current,
         { opacity: 0, y: 50 },
@@ -33,7 +33,7 @@ const Skills = () => {
         }
       );
 
-      // Skills cards animation
+      
       gsap.fromTo(
         skillsRef.current?.children || [],
         { opacity: 0, y: 30, scale: 0.9 },
@@ -162,7 +162,7 @@ const Skills = () => {
           </h2>
         </Tilt>
 
-        {/* Skills Grid */}
+        
         <div
           ref={skillsRef}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
