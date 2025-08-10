@@ -169,12 +169,12 @@ const Projects = () => {
           "Bulk and individual email communication using Nodemailer with password recovery support",
           "Admin dashboard with stats and charts powered by Recharts for analytics",
           "Suggestion and feedback module with admin inbox for two-way communication",
-          "Responsive mobile-first UI with Tailwind CSS, Framer Motion, and interactive UI effects",
-          "Form handling and validation using React Hook Form, and client-side routing via React Router",
+          
+          "Form handling and validation using React Hook Form, client-side routing via React Router",
           "Image and media storage using Cloudinary with secure access and display",
           "State management using Redux Toolkit and global context for user and event data",
 
-          "Paperless, eco-friendly system eliminating need for WhatsApp, Google Forms, or physical notices",
+          "Paperless, eco-friendly, eliminating need for WhatsApp, Google Forms, physical notices",
         ],
         githubUrl: "https://github.com/sachinchauhan010/NexusSocietyFrontend",
         liveUrl: "https://nexussociety.vercel.app/",
@@ -295,7 +295,7 @@ const Projects = () => {
 
         <div
           ref={projectsRef}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-7xl mx-auto px-4 sm:px-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-10xl mx-auto px-4 sm:px-6"
         >
           {/* Render project cards as before */}
           {projects.map((project, index) => (
