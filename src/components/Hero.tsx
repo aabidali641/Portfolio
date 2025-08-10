@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import Tilt from "react-parallax-tilt"; // Already imported
 import {
   ChevronDown,
   Download,
@@ -56,7 +57,7 @@ const Hero = () => {
       );
 
     gsap.to(scrollIndicatorRef.current, {
-      y: 10,
+      y: 50,
       duration: 2,
       repeat: -1,
       yoyo: true,
@@ -132,11 +133,29 @@ const Hero = () => {
       <div className="absolute inset-0 bg-background/70 backdrop-blur-sm"></div>
 
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-        <h1 ref={titleRef} className="text-5xl md:text-9xl font-bold mb-6">
-          <span className="text-gradient bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400">
-            Aabid Ali
-          </span>
-        </h1>
+        {/* Wrap your h1 with Tilt for parallax effect on hover */}
+        <Tilt
+          tiltEnable={true}
+          glareEnable={true}
+          glareMaxOpacity={0.25}
+          glareColor="white"
+          glarePosition="bottom"
+          glareBorderRadius="1rem"
+          scale={1.05}
+          transitionSpeed={400}
+          tiltMaxAngleX={15}
+          tiltMaxAngleY={15}
+          className="inline-block"
+        >
+          <h1
+            ref={titleRef}
+            className="text-5xl md:text-9xl font-bold mb-6 cursor-pointer"
+          >
+            <span className="text-gradient bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400">
+              Aabid Ali
+            </span>
+          </h1>
+        </Tilt>
 
         <p
           ref={subtitleRef}
