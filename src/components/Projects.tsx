@@ -262,7 +262,7 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <h2
           ref={titleRef}
-          className="text-5xl md:text-7xl font-bold mb-16 text-center text-gradient"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-12 sm:mb-16 text-center text-gradient"
         >
           <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
             Featured Projects
