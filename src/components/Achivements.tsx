@@ -13,7 +13,7 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Heading animation
+      
       gsap.fromTo(
         sectionRef.current?.querySelector("h3"),
         { opacity: 0, y: 50 },
@@ -30,7 +30,7 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
         }
       );
 
-      // Cards animation
+      
       gsap.fromTo(
         sectionRef.current?.querySelectorAll(".ach-card") || [],
         { opacity: 0, y: 30, scale: 0.9 },
@@ -87,7 +87,7 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
       className="mt-16 py-0 scroll-mt-24"
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-8">
-        {/* Tilt on Title */}
+        
         <Tilt
           tiltEnable={true}
           glareEnable={true}
