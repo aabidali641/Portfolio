@@ -138,31 +138,32 @@ const About = () => {
             </div>
           </div>
 
-          <div className="glass p-8 rounded-2xl">
-            <h4 className="text-xl font-semibold mb-6 text-primary">
+          <div className="glass p-8 rounded-2xl max-w-xl mx-auto w-full">
+            <h4 className="text-xl font-semibold mb-6 text-primary text-center lg:text-left">
               Quick Facts
             </h4>
-            <div className="space-y-4">
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Location</span>
-                <span className="font-medium">Amroha Uttar Pradesh, INDIA</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Email</span>
-                <span className="font-medium">mdaabidali28@gmail.com</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Degree</span>
-                <span className="font-medium">
-                  Master of Computer Applications
-                </span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Specialization</span>
-                <span className="font-medium">
-                  Information Technology And Computer Applications
-                </span>
-              </div>
+            <div className="space-y-6">
+              {[
+                { label: "Location", value: "Amroha Uttar Pradesh, INDIA" },
+                { label: "Email", value: "mdaabidali28@gmail.com" },
+                { label: "Degree", value: "Master of Computer Applications" },
+                {
+                  label: "Specialization",
+                  value: "Information Technology And Computer Applications",
+                },
+              ].map(({ label, value }) => (
+                <div
+                  key={label}
+                  className="flex flex-col sm:flex-row justify-between items-center"
+                >
+                  <span className="text-muted-foreground font-medium sm:w-1/3 text-center sm:text-left mb-1 sm:mb-0">
+                    {label}
+                  </span>
+                  <span className="font-semibold sm:w-2/3 text-center sm:text-right break-words">
+                    {value}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
