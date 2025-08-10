@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Twitter, Globe, Mail } from "lucide-react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const socialLinks = [
   {
@@ -31,15 +35,71 @@ const socialLinks = [
 ];
 
 export default function FollowMe() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const buttonsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Animate title: fade in + slide up
+      gsap.fromTo(
+        titleRef.current,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: titleRef.current,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      // Animate buttons: fade in + scale up staggered
+      if (buttonsRef.current) {
+        gsap.fromTo(
+          buttonsRef.current.children,
+          { opacity: 0, scale: 0.8 },
+          {
+            opacity: 1,
+            scale: 1,
+            duration: 0.8,
+            ease: "power3.out",
+            stagger: 0.15,
+            scrollTrigger: {
+              trigger: buttonsRef.current,
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      }
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="mt-0 text-center px-4 sm:px-6 md:px-8 max-w-5xl mx-auto">
-      <h4 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 sm:mb-8 text-gradient">
+    <div
+      ref={sectionRef}
+      className="mt-0 text-center px-4 sm:px-6 md:px-8 max-w-5xl mx-auto"
+    >
+      <h4
+        ref={titleRef}
+        className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 sm:mb-8 text-gradient"
+      >
         <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
           Follow Me
         </span>
       </h4>
 
-      <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12 mb-16">
+      <div
+        ref={buttonsRef}
+        className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12 mb-16"
+      >
         {socialLinks.map((social, index) => (
           <Button
             key={index}
