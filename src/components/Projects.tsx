@@ -12,7 +12,7 @@ import {
   Smartphone,
   Cpu,
 } from "lucide-react";
-import Tilt from "react-parallax-tilt"; // Import Tilt
+import Tilt from "react-parallax-tilt"; 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,7 +23,7 @@ const Projects = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Title animation
+      
       gsap.fromTo(
         titleRef.current,
         { opacity: 0, y: 50 },
@@ -40,7 +40,7 @@ const Projects = () => {
         }
       );
 
-      // Projects grid animation
+      
       gsap.fromTo(
         projectsRef.current?.children || [],
         { opacity: 0, y: 30, scale: 0.9 },
@@ -297,7 +297,7 @@ const Projects = () => {
           ref={projectsRef}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-10xl mx-auto px-4 sm:px-6"
         >
-          {/* Render project cards as before */}
+          
           {projects.map((project, index) => (
             <Card
               key={index}
