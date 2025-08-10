@@ -1,9 +1,10 @@
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Calendar, MapPin, Briefcase } from 'lucide-react';
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, MapPin, Briefcase } from "lucide-react";
+import Tilt from "react-parallax-tilt"; // Import Tilt
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,7 +16,8 @@ const Experience = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Title animation
-      gsap.fromTo(titleRef.current, 
+      gsap.fromTo(
+        titleRef.current,
         { opacity: 0, y: 50 },
         {
           opacity: 1,
@@ -25,13 +27,14 @@ const Experience = () => {
           scrollTrigger: {
             trigger: titleRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
 
       // Timeline items animation
-      gsap.fromTo(timelineRef.current?.children || [], 
+      gsap.fromTo(
+        timelineRef.current?.children || [],
         { opacity: 0, x: -100 },
         {
           opacity: 1,
@@ -42,8 +45,8 @@ const Experience = () => {
           scrollTrigger: {
             trigger: timelineRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
     }, sectionRef);
@@ -51,82 +54,97 @@ const Experience = () => {
     return () => ctx.revert();
   }, []);
 
-  const experiences = [
-    {
-      title: "Full Stack Developer Intern",
-      company: "Academic Internship – MMMUT",
-      period: "2025",
-      location: "MMMUT, Gorakhpur",
-      type: "Academic Internship",
-      description:
-        "Contributed as a full stack developer in building Nexus Society — a centralized, full-stack campus society management web application aimed at simplifying and digitalizing society operations. Worked closely with the team to implement secure authentication, responsive user interfaces, real-time communications, and payment integration.",
-      achievements: [
-        "Developed core modules including user authentication, event registration, and merchandise management.",
-        "Integrated Razorpay payment gateway for secure online transactions.",
-        "Implemented password reset and email notification system using Nodemailer.",
-        "Built responsive and interactive UI using Tailwind CSS, Framer Motion, and React Parallax Tilt.",
-        "Used React Hook Form and Redux Toolkit for state and form handling across the application.",
-        "Connected frontend and backend using RESTful APIs built with Express.js and Node.js.",
-        "Managed database schemas and operations using MongoDB and Mongoose.",
-        "Ensured role-based access control with JWT to separate user and admin privileges.",
-        "Collaborated on GitHub and participated in CI/CD automation using GitHub Actions.",
-        "Deployed frontend on Vercel and backend on Render ensuring production readiness.",
-      ],
-      technologies: [
-        "React.js",
-        "TypeScript",
-        "Vite",
-        "Tailwind CSS",
-        "Framer Motion",
-        "Redux Toolkit",
-        "React Hook Form",
-        "React Router DOM",
-        "Recharts",
-        "React Toastify",
-        "Lucide React",
-        "React Parallax Tilt",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Mongoose",
-        "JWT",
-        "Nodemailer",
-        "Razorpay",
-        "Cloudinary",
-        "Vercel",
-        "Render",
-        "GitHub Actions",
-      ],
-    },
-    {
-      title: "Java Intern",
-      company: "InternPe",
-      period: "07/2024 - 09/2024",
-      location: "Remote",
-      type: "Internship",
-      description:
-        "Designed and developed four interactive Java-based applications during internship.",
-      achievements: [
-        "Guessing Game - Interactive number guessing game with user feedback",
-        "Rock-Paper-Scissors - Classic game implementation with clean UI",
-        "Tic-Tac-Toe - Two-player game with win detection logic",
-        "Connect Four Game - Strategic board game with advanced algorithms",
-      ],
-      technologies: ["Java", "OOP", "Game Development", "Algorithms"],
-    },
-  ];
+  
+     const experiences = [
+       {
+         title: "Full Stack Developer Intern",
+         company: "Academic Internship – MMMUT",
+         period: "2025",
+         location: "MMMUT, Gorakhpur",
+         type: "Academic Internship",
+         description:
+           "Contributed as a full stack developer in building Nexus Society — a centralized, full-stack campus society management web application aimed at simplifying and digitalizing society operations. Worked closely with the team to implement secure authentication, responsive user interfaces, real-time communications, and payment integration.",
+         achievements: [
+           "Developed core modules including user authentication, event registration, and merchandise management.",
+           "Integrated Razorpay payment gateway for secure online transactions.",
+           "Implemented password reset and email notification system using Nodemailer.",
+           "Built responsive and interactive UI using Tailwind CSS, Framer Motion, and React Parallax Tilt.",
+           "Used React Hook Form and Redux Toolkit for state and form handling across the application.",
+           "Connected frontend and backend using RESTful APIs built with Express.js and Node.js.",
+           "Managed database schemas and operations using MongoDB and Mongoose.",
+           "Ensured role-based access control with JWT to separate user and admin privileges.",
+           "Collaborated on GitHub and participated in CI/CD automation using GitHub Actions.",
+           "Deployed frontend on Vercel and backend on Render ensuring production readiness.",
+         ],
+         technologies: [
+           "React.js",
+           "TypeScript",
+           "Vite",
+           "Tailwind CSS",
+           "Framer Motion",
+           "Redux Toolkit",
+           "React Hook Form",
+           "React Router DOM",
+           "Recharts",
+           "React Toastify",
+           "Lucide React",
+           "React Parallax Tilt",
+           "Node.js",
+           "Express.js",
+           "MongoDB",
+           "Mongoose",
+           "JWT",
+           "Nodemailer",
+           "Razorpay",
+           "Cloudinary",
+           "Vercel",
+           "Render",
+           "GitHub Actions",
+         ],
+       },
+       {
+         title: "Java Intern",
+         company: "InternPe",
+         period: "07/2024 - 09/2024",
+         location: "Remote",
+         type: "Internship",
+         description:
+           "Designed and developed four interactive Java-based applications during internship.",
+         achievements: [
+           "Guessing Game - Interactive number guessing game with user feedback",
+           "Rock-Paper-Scissors - Classic game implementation with clean UI",
+           "Tic-Tac-Toe - Two-player game with win detection logic",
+           "Connect Four Game - Strategic board game with advanced algorithms",
+         ],
+         technologies: ["Java", "OOP", "Game Development", "Algorithms"],
+       },
+     ];
 
   return (
     <section ref={sectionRef} id="experience" className="py-20">
       <div className="container mx-auto px-6">
-        <h2
-          ref={titleRef}
-          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-12 sm:mb-16 text-center text-gradient"
+        <Tilt
+          tiltEnable={true}
+          glareEnable={true}
+          glareMaxOpacity={0.25}
+          glareColor="white"
+          glarePosition="bottom"
+          glareBorderRadius="1rem"
+          scale={1.5}
+          transitionSpeed={900}
+          tiltMaxAngleX={25}
+          tiltMaxAngleY={25}
+          className="block mx-auto max-w-max cursor-pointer mb-12 sm:mb-16"
         >
-          <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
-            Experience
-          </span>
-        </h2>
+          <h2
+            ref={titleRef}
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-center text-gradient"
+          >
+            <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
+              Experience
+            </span>
+          </h2>
+        </Tilt>
 
         <div ref={timelineRef} className="max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
