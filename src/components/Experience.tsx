@@ -15,7 +15,7 @@ const Experience = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Title animation
+      
       gsap.fromTo(
         titleRef.current,
         { opacity: 0, y: 50 },
@@ -149,12 +149,12 @@ const Experience = () => {
         <div ref={timelineRef} className="max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
             <div key={index} className="relative mb-12 last:mb-0">
-              {/* Timeline line */}
+              
               <div className="absolute left-8 top-12 bottom-0 w-0.5 bg-primary/30 hidden md:block"></div>
 
               <Card className="glass border-primary/20 hover:border-primary/40 transition-all duration-300 hover:neon-glow ml-0 md:ml-20">
                 <CardContent className="p-8">
-                  {/* Timeline dot */}
+                 
                   <div className="absolute -left-2 top-8 w-4 h-4 bg-primary rounded-full border-4 border-background hidden md:block"></div>
 
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
