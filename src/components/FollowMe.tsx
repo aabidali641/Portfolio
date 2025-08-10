@@ -25,7 +25,7 @@ const socialLinks = [
   {
     icon: Globe,
     title: "Portfolio",
-    url: "https://yourportfolio.com",
+    url: "https://portfolio-aabidali641s-projects.vercel.app/",
   },
   {
     icon: Mail,
