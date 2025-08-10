@@ -110,35 +110,49 @@ const Achievements = forwardRef<HTMLDivElement>((_, ref) => {
 
         <div ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {achievements.map((ach, index) => (
-            <Card
+            <Tilt
               key={index}
-              className="ach-card glass border-primary/20 hover:border-primary/40 transition-all duration-300 hover:neon-glow"
+              tiltEnable={true}
+              glareEnable={true}
+              glareMaxOpacity={0.15}
+              glareColor="white"
+              glarePosition="bottom"
+              glareBorderRadius="1rem"
+              scale={1.05}
+              transitionSpeed={600}
+              tiltMaxAngleX={15}
+              tiltMaxAngleY={15}
+              className="block"
             >
-              <CardContent className="p-6">
-                <div className="flex items-start gap-3 mb-4">
-                  <div className="p-2 bg-primary/10 rounded-lg flex-shrink-0">
-                    {ach.icon && <ach.icon className="h-5 w-5 text-primary" />}
+              <Card className="ach-card glass border-primary/20 hover:border-primary/40 transition-all duration-300 hover:neon-glow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="p-2 bg-primary/10 rounded-lg flex-shrink-0">
+                      {ach.icon && (
+                        <ach.icon className="h-5 w-5 text-primary" />
+                      )}
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-primary mb-1 text-xl">
+                        {ach.title}
+                      </h4>
+                      <p className="text-sm text-muted-foreground mb-1">
+                        {ach.organization}
+                      </p>
+                      <Badge
+                        variant="outline"
+                        className="text-xs border-primary/30"
+                      >
+                        {ach.date}
+                      </Badge>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-primary mb-1 text-xl">
-                      {ach.title}
-                    </h4>
-                    <p className="text-sm text-muted-foreground mb-1">
-                      {ach.organization}
-                    </p>
-                    <Badge
-                      variant="outline"
-                      className="text-xs border-primary/30"
-                    >
-                      {ach.date}
-                    </Badge>
-                  </div>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {ach.description}
-                </p>
-              </CardContent>
-            </Card>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {ach.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </Tilt>
           ))}
         </div>
       </div>
