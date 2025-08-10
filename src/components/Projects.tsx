@@ -269,43 +269,46 @@ const Projects = () => {
           </span>
         </h2>
 
-        <div ref={projectsRef} className="grid lg:grid-cols-2 gap-8">
+        <div
+          ref={projectsRef}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-7xl mx-auto px-4 sm:px-6"
+        >
           {projects.map((project, index) => (
             <Card
               key={index}
               className="glass border-primary/20 hover:border-primary/40 transition-all duration-300 hover:neon-glow group"
             >
               <CardHeader>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <project.icon className="h-6 w-6 text-primary" />
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 sm:p-3 bg-primary/10 rounded-lg">
+                    <project.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
                   <Badge
                     variant="outline"
-                    className="border-primary/30 text-primary"
+                    className="border-primary/30 text-primary text-xs sm:text-sm"
                   >
                     {project.category}
                   </Badge>
                 </div>
-                <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">
+                <CardTitle className="text-lg sm:text-xl font-bold group-hover:text-primary transition-colors">
                   {project.title}
                 </CardTitle>
               </CardHeader>
 
-              <CardContent className="space-y-6">
-                <p className="text-muted-foreground leading-relaxed">
+              <CardContent className="space-y-5 sm:space-y-6">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {project.description}
                 </p>
 
                 <div>
-                  <h4 className="font-semibold mb-3 text-primary">
+                  <h4 className="font-semibold mb-3 text-primary text-base sm:text-lg">
                     Key Features:
                   </h4>
                   <ul className="space-y-2">
                     {project.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-sm text-muted-foreground">
+                        <span className="text-xs sm:text-sm text-muted-foreground">
                           {feature}
                         </span>
                       </li>
@@ -315,13 +318,17 @@ const Projects = () => {
 
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, i) => (
-                    <Badge key={i} variant="secondary" className="text-xs">
+                    <Badge
+                      key={i}
+                      variant="secondary"
+                      className="text-xs sm:text-sm"
+                    >
                       {tech}
                     </Badge>
                   ))}
                 </div>
 
-                <div className="flex gap-4 pt-4">
+                <div className="flex flex-wrap gap-4 pt-4">
                   <Button
                     variant="outline"
                     size="sm"
@@ -332,6 +339,7 @@ const Projects = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="flex items-center"
                     >
                       <Github className="h-4 w-4 mr-2" />
                       Code
@@ -346,6 +354,7 @@ const Projects = () => {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="flex items-center"
                     >
                       <ExternalLink className="h-4 w-4 mr-2" />
                       Live Demo
