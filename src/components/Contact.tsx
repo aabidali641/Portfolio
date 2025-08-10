@@ -6,17 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Github,
-  Linkedin,
-  Send,
-  Globe,
-  Twitter,
-  Loader2,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
+import Tilt from "react-parallax-tilt";
 import patternBg from "@/assets/pattern-bg.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -166,8 +157,6 @@ const Contact = () => {
     },
   ];
 
- 
-
   return (
     <section
       ref={sectionRef}
@@ -184,14 +173,29 @@ const Contact = () => {
       ></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <h2
-          ref={titleRef}
-          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-12 sm:mb-16 text-center text-gradient"
+        {/* Tilt on Title */}
+        <Tilt
+          tiltEnable={true}
+          glareEnable={true}
+          glareMaxOpacity={0.25}
+          glareColor="white"
+          glarePosition="bottom"
+          glareBorderRadius="1rem"
+          scale={1.5}
+          transitionSpeed={900}
+          tiltMaxAngleX={25}
+          tiltMaxAngleY={25}
+          className="block mx-auto max-w-max mb-12 sm:mb-16"
         >
-          <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
-            Get in Touch
-          </span>
-        </h2>
+          <h2
+            ref={titleRef}
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gradient text-center"
+          >
+            <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
+              Get in Touch
+            </span>
+          </h2>
+        </Tilt>
 
         <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
           <div ref={formRef}>
@@ -275,29 +279,41 @@ const Contact = () => {
 
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
-                <Card
+                <Tilt
                   key={index}
-                  className="glass border-primary/20 hover:shadow-lg transition-shadow duration-300"
+                  tiltEnable={true}
+                  glareEnable={true}
+                  glareMaxOpacity={0.15}
+                  glareColor="white"
+                  glarePosition="bottom"
+                  glareBorderRadius="1rem"
+                  scale={1.05}
+                  transitionSpeed={600}
+                  tiltMaxAngleX={15}
+                  tiltMaxAngleY={15}
+                  className="block"
                 >
-                  <CardContent className="p-5 sm:p-6">
-                    <div className="flex items-center gap-4">
-                      <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
-                        <info.icon className="h-6 w-6 sm:h-7 sm:w-7 text-primary" />
+                  <Card className="glass border-primary/20 hover:shadow-lg transition-shadow duration-300">
+                    <CardContent className="p-5 sm:p-6">
+                      <div className="flex items-center gap-4">
+                        <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
+                          <info.icon className="h-6 w-6 sm:h-7 sm:w-7 text-primary" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-primary text-lg sm:text-xl">
+                            {info.title}
+                          </h4>
+                          <a
+                            href={info.link}
+                            className="text-muted-foreground hover:text-primary break-all text-sm sm:text-base"
+                          >
+                            {info.value}
+                          </a>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-primary text-lg sm:text-xl">
-                          {info.title}
-                        </h4>
-                        <a
-                          href={info.link}
-                          className="text-muted-foreground hover:text-primary break-all text-sm sm:text-base"
-                        >
-                          {info.value}
-                        </a>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </Tilt>
               ))}
             </div>
           </div>
