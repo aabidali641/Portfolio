@@ -1,10 +1,18 @@
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Github, Database, Globe, Smartphone, Cpu } from 'lucide-react';
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  ExternalLink,
+  Github,
+  Database,
+  Globe,
+  Smartphone,
+  Cpu,
+} from "lucide-react";
+import Tilt from "react-parallax-tilt"; // Import Tilt
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,7 +24,8 @@ const Projects = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Title animation
-      gsap.fromTo(titleRef.current, 
+      gsap.fromTo(
+        titleRef.current,
         { opacity: 0, y: 50 },
         {
           opacity: 1,
@@ -26,13 +35,14 @@ const Projects = () => {
           scrollTrigger: {
             trigger: titleRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
 
       // Projects grid animation
-      gsap.fromTo(projectsRef.current?.children || [], 
+      gsap.fromTo(
+        projectsRef.current?.children || [],
         { opacity: 0, y: 30, scale: 0.9 },
         {
           opacity: 1,
@@ -44,8 +54,8 @@ const Projects = () => {
           scrollTrigger: {
             trigger: projectsRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
     }, sectionRef);
@@ -53,226 +63,241 @@ const Projects = () => {
     return () => ctx.revert();
   }, []);
 
-  const projects = [
-    {
-      title: "WealthSync – AI-Powerd Budgeting and Finance Optimization System",
-      description:
-        "An AI-powered system to track expenses, automate recurring payments, and give smart insights for better budgeting and financial control — all through a secure, personalized, and seamless user experience.",
-      icon: Database,
-      technologies: [
-        "React",
-        "Next.js",
-        "Tailwind CSS",
-        "Shadcn UI",
-        "Framer Motion",
-        "Zustand",
-        "React Hook Form",
-        "Zod",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Prisma",
-        "Supabase",
+    const projects = [
+      {
+        title:
+          "WealthSync – AI-Powerd Budgeting and Finance Optimization System",
+        description:
+          "An AI-powered system to track expenses, automate recurring payments, and give smart insights for better budgeting and financial control — all through a secure, personalized, and seamless user experience.",
+        icon: Database,
+        technologies: [
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "Shadcn UI",
+          "Framer Motion",
+          "Zustand",
+          "React Hook Form",
+          "Zod",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "Prisma",
+          "Supabase",
 
-        "JWT",
-        "Clerk",
-        "Inngest",
-        "Arcjet",
-        "Cloudinary",
-      ],
-      features: [
-        "AI-Powered Smart Transaction Categorization",
+          "JWT",
+          "Clerk",
+          "Inngest",
+          "Arcjet",
+          "Cloudinary",
+        ],
+        features: [
+          "AI-Powered Smart Transaction Categorization",
 
-        "Real-Time Expense Tracking and Analytics",
-        "State Management with Zustand",
+          "Real-Time Expense Tracking and Analytics",
+          "State Management with Zustand",
 
-        "Form Handling and Validation with React Hook Form + Zod",
+          "Form Handling and Validation with React Hook Form + Zod",
 
-        "Scalable Backend with Node.js, Express & Prisma",
+          "Scalable Backend with Node.js, Express & Prisma",
 
-        "Managed Database with Supabase (PostgreSQL)",
+          "Managed Database with Supabase (PostgreSQL)",
 
-        "OCR-Based Receipt Scanning and Auto-Fill",
+          "OCR-Based Receipt Scanning and Auto-Fill",
 
-        "Multi-Account and Transaction Type Support",
+          "Multi-Account and Transaction Type Support",
 
-        "Intelligent Budget Creation and Management",
+          "Intelligent Budget Creation and Management",
 
-        "Personalized Budget Suggestions and Email Alerts using AI",
+          "Personalized Budget Suggestions and Email Alerts using AI",
 
-        "Secure User Authentication via Clerk (OAuth)",
+          "Secure User Authentication via Clerk (OAuth)",
 
-        "Bot Protection and Rate Limiting via Arcjet",
+          "Bot Protection and Rate Limiting via Arcjet",
 
-        "Fast Server-Side Rendering with Next.js",
+          "Fast Server-Side Rendering with Next.js",
 
-        "Cloud-Based Receipt and Media Storage (Cloudinary)",
+          "Cloud-Based Receipt and Media Storage (Cloudinary)",
 
-        "Event-Driven and Cron-Based Workflows (using Inngest)",
+          "Event-Driven and Cron-Based Workflows (using Inngest)",
 
-        "Budget Limit Alerts and Notifications",
-      ],
-      githubUrl: "https://github.com/aabidali641/WealthSync-",
-      liveUrl: "#",
-      category: "Full Stack With AI Integration",
-    },
-    {
-      title:
-        "Nexus Society – The Smart And Complete Solution for Campus Societies",
-      description:
-        "A full-stack, university-authenticated web platform for managing campus societies — offering secure student registration, digital notice boards, event creation, result announcements, online payments, merchandise handling, real-time email alerts, and an interactive dashboard for admins and students alike — all designed to bring efficiency, transparency, and digital empowerment to student life..",
-      icon: Globe,
-      technologies: [
-        "React",
-        "Vite",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Mongoose",
-        "Tailwind CSS",
-        "Shadcn UI",
-        "Framer Motion",
-        "React Parallax Tilt",
+          "Budget Limit Alerts and Notifications",
+        ],
+        githubUrl: "https://github.com/aabidali641/WealthSync-",
+        liveUrl: "#",
+        category: "Full Stack With AI Integration",
+      },
+      {
+        title:
+          "Nexus Society – The Smart And Complete Solution for Campus Societies",
+        description:
+          "A full-stack, university-authenticated web platform for managing campus societies — offering secure student registration, digital notice boards, event creation, result announcements, online payments, merchandise handling, real-time email alerts, and an interactive dashboard for admins and students alike — all designed to bring efficiency, transparency, and digital empowerment to student life..",
+        icon: Globe,
+        technologies: [
+          "React",
+          "Vite",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "Mongoose",
+          "Tailwind CSS",
+          "Shadcn UI",
+          "Framer Motion",
+          "React Parallax Tilt",
 
-        "Redux Toolkit",
-        "React Router DOM",
-        "JWT",
+          "Redux Toolkit",
+          "React Router DOM",
+          "JWT",
 
-        "Nodemailer",
-        "Razorpay",
-        "Cloudinary",
-        "Recharts",
-        "React Toastify",
-        "Vercel",
-        "Render",
-        "GitHub Actions",
-      ],
+          "Nodemailer",
+          "Razorpay",
+          "Cloudinary",
+          "Recharts",
+          "React Toastify",
+          "Vercel",
+          "Render",
+          "GitHub Actions",
+        ],
 
-      features: [
-        "University-verified registration and role-based access control for students and admins",
-        "Secure JWT-based authentication with protected routes and session handling",
-        "Event creation, editing, registration, and real-time result announcements",
-        "Merchandise listing, order management, and secure payment integration using Razorpay",
-        "Digital notice board with downloadable PDFs and email notifications",
-        "Merchandise listing and order management with admin control panel",
-        "Bulk and individual email communication using Nodemailer with password recovery support",
-        "Admin dashboard with stats and charts powered by Recharts for analytics",
-        "Suggestion and feedback module with admin inbox for two-way communication",
-        "Responsive mobile-first UI with Tailwind CSS, Framer Motion, and interactive UI effects",
-        "Form handling and validation using React Hook Form, and client-side routing via React Router",
-        "Image and media storage using Cloudinary with secure access and display",
-        "State management using Redux Toolkit and global context for user and event data",
+        features: [
+          "University-verified registration and role-based access control for students and admins",
+          "Secure JWT-based authentication with protected routes and session handling",
+          "Event creation, editing, registration, and real-time result announcements",
+          "Merchandise listing, order management, and secure payment integration using Razorpay",
+          "Digital notice board with downloadable PDFs and email notifications",
+          "Merchandise listing and order management with admin control panel",
+          "Bulk and individual email communication using Nodemailer with password recovery support",
+          "Admin dashboard with stats and charts powered by Recharts for analytics",
+          "Suggestion and feedback module with admin inbox for two-way communication",
+          "Responsive mobile-first UI with Tailwind CSS, Framer Motion, and interactive UI effects",
+          "Form handling and validation using React Hook Form, and client-side routing via React Router",
+          "Image and media storage using Cloudinary with secure access and display",
+          "State management using Redux Toolkit and global context for user and event data",
 
-        "Paperless, eco-friendly system eliminating need for WhatsApp, Google Forms, or physical notices",
-      ],
-      githubUrl: "https://github.com/sachinchauhan010/NexusSocietyFrontend",
-      liveUrl: "https://nexussociety.vercel.app/",
-      category: "Full Stack",
-    },
-    {
-      title: "Talkify – Real-Time Chat Application",
-      description:
-        "A full-stack MERN-based real-time chat application with secure authentication, live socket communication, custom group and private chat rooms, message notifications, and a modern responsive UI built for seamless communication.",
-      icon: Smartphone,
-      technologies: [
-        "React",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Mongoose",
-        "Socket.IO",
-        "JWT",
-        "Tailwind CSS",
-        "Axios",
-        "React Router DOM",
-        "React Icons",
-        "Cloudinary",
-        "Multer",
-        "Vercel",
-        "Render",
-      ],
+          "Paperless, eco-friendly system eliminating need for WhatsApp, Google Forms, or physical notices",
+        ],
+        githubUrl: "https://github.com/sachinchauhan010/NexusSocietyFrontend",
+        liveUrl: "https://nexussociety.vercel.app/",
+        category: "Full Stack",
+      },
+      {
+        title: "Talkify – Real-Time Chat Application",
+        description:
+          "A full-stack MERN-based real-time chat application with secure authentication, live socket communication, custom group and private chat rooms, message notifications, and a modern responsive UI built for seamless communication.",
+        icon: Smartphone,
+        technologies: [
+          "React",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "Mongoose",
+          "Socket.IO",
+          "JWT",
+          "Tailwind CSS",
+          "Axios",
+          "React Router DOM",
+          "React Icons",
+          "Cloudinary",
+          "Multer",
+          "Vercel",
+          "Render",
+        ],
 
-      features: [
-        "Real-time messaging using Socket.IO for both private and group chats",
-        "Secure user registration and login with JWT-based authentication",
-        "Custom chat rooms for one-on-one and group communication",
-        "Online/offline user status indicators and typing notifications",
-        "Message delivery acknowledgment and seen status",
-        "Search functionality for users and chat conversations",
-        "Dynamic chat list and chat preview with latest message and timestamp",
-        "User profile customization with avatar upload",
-        "Responsive and modern UI using Tailwind CSS and React",
-        "Authentication flow and protected routes with token management",
-        "Real-time updates and new message notifications using sockets",
-        "MongoDB schema design for users, chats, and messages",
-        "Scalable architecture to handle multiple concurrent users",
-        "Fully responsive layout for mobile and desktop compatibility",
-        "Clean chat scroll management and auto-scrolling on new messages",
-      ],
+        features: [
+          "Real-time messaging using Socket.IO for both private and group chats",
+          "Secure user registration and login with JWT-based authentication",
+          "Custom chat rooms for one-on-one and group communication",
+          "Online/offline user status indicators and typing notifications",
+          "Message delivery acknowledgment and seen status",
+          "Search functionality for users and chat conversations",
+          "Dynamic chat list and chat preview with latest message and timestamp",
+          "User profile customization with avatar upload",
+          "Responsive and modern UI using Tailwind CSS and React",
+          "Authentication flow and protected routes with token management",
+          "Real-time updates and new message notifications using sockets",
+          "MongoDB schema design for users, chats, and messages",
+          "Scalable architecture to handle multiple concurrent users",
+          "Fully responsive layout for mobile and desktop compatibility",
+          "Clean chat scroll management and auto-scrolling on new messages",
+        ],
 
-      githubUrl: "https://github.com/aabidali641/Talkify",
-      liveUrl: "https://talkify-1qom.onrender.com/",
-      category: "Full Stack With Socket.IO",
-    },
-    {
-      title: "TazZA – Fresh Food & Juice Delivery Web Application",
-      description:
-        "A dynamic and user-friendly web platform built with EJS, Bootstrap, and Node.js, TazZA ensures doorstep delivery of fresh food, vegetables, and juice with secure user authentication, category-based ordering, and admin-side control — optimized for freshness, speed, and simplicity.",
-      icon: Smartphone,
-      technologies: [
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Mongoose",
-        "EJS",
-        "Bootstrap",
-        "Passport.js",
-        "Express-Session",
-        "Connect-Flash",
-        "Cloudinary",
-        "Multer",
-        "Dotenv",
-        "Render",
-      ],
-      features: [
-        "Category-based ordering system for fresh food, vegetables, and juices",
-        "User registration and login with secure authentication using Passport.js",
-        "Product listings with images, pricing, and detailed descriptions",
-        "Admin panel for managing products, categories, and orders",
-        "Cart functionality with dynamic item addition and quantity updates",
-        "Order placement with order summary and confirmation",
-        "EJS templating for fast server-side rendering and dynamic content",
-        "Session management using Express-session and cookie handling",
-        "Bootstrap-based responsive design for mobile and desktop views",
-        "Flash messages for actions like login, logout, and order success",
-        "Cloudinary integration for storing and serving product images",
-        "Modular route handling for clean and maintainable backend code",
-        "Fully secured routes for both users and admin panels",
-        "Scalable MVC architecture for easy feature addition",
-      ],
-      githubUrl: "https://github.com/aabidali641/TazZA",
-      liveUrl: "https://github.com/aabidali641/TazZA",
-      category: "Full Stack With EJS",
-    },
-    
-  ];
+        githubUrl: "https://github.com/aabidali641/Talkify",
+        liveUrl: "https://talkify-1qom.onrender.com/",
+        category: "Full Stack With Socket.IO",
+      },
+      {
+        title: "TazZA – Fresh Food & Juice Delivery Web Application",
+        description:
+          "A dynamic and user-friendly web platform built with EJS, Bootstrap, and Node.js, TazZA ensures doorstep delivery of fresh food, vegetables, and juice with secure user authentication, category-based ordering, and admin-side control — optimized for freshness, speed, and simplicity.",
+        icon: Smartphone,
+        technologies: [
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "Mongoose",
+          "EJS",
+          "Bootstrap",
+          "Passport.js",
+          "Express-Session",
+          "Connect-Flash",
+          "Cloudinary",
+          "Multer",
+          "Dotenv",
+          "Render",
+        ],
+        features: [
+          "Category-based ordering system for fresh food, vegetables, and juices",
+          "User registration and login with secure authentication using Passport.js",
+          "Product listings with images, pricing, and detailed descriptions",
+          "Admin panel for managing products, categories, and orders",
+          "Cart functionality with dynamic item addition and quantity updates",
+          "Order placement with order summary and confirmation",
+          "EJS templating for fast server-side rendering and dynamic content",
+          "Session management using Express-session and cookie handling",
+          "Bootstrap-based responsive design for mobile and desktop views",
+          "Flash messages for actions like login, logout, and order success",
+          "Cloudinary integration for storing and serving product images",
+          "Modular route handling for clean and maintainable backend code",
+          "Fully secured routes for both users and admin panels",
+          "Scalable MVC architecture for easy feature addition",
+        ],
+        githubUrl: "https://github.com/aabidali641/TazZA",
+        liveUrl: "https://github.com/aabidali641/TazZA",
+        category: "Full Stack With EJS",
+      },
+    ];
 
   return (
     <section ref={sectionRef} id="projects" className="py-20 bg-secondary/10">
       <div className="container mx-auto px-6">
-        <h2
-          ref={titleRef}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-12 sm:mb-16 text-center text-gradient"
+        <Tilt
+          tiltEnable={true}
+          glareEnable={true}
+          glareMaxOpacity={0.25}
+          glareColor="white"
+          glarePosition="bottom"
+          glareBorderRadius="1rem"
+          scale={1.5}
+          transitionSpeed={900}
+          tiltMaxAngleX={25}
+          tiltMaxAngleY={25}
+          className="block mx-auto max-w-max cursor-pointer mb-12 sm:mb-16"
         >
-          <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
-            Featured Projects
-          </span>
-        </h2>
+          <h2
+            ref={titleRef}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center text-gradient"
+          >
+            <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
+              Featured Projects
+            </span>
+          </h2>
+        </Tilt>
 
         <div
           ref={projectsRef}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-7xl mx-auto px-4 sm:px-6"
         >
+          {/* Render project cards as before */}
           {projects.map((project, index) => (
             <Card
               key={index}
