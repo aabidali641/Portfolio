@@ -65,7 +65,7 @@ const Skills = () => {
         "C++",
         "Python",
         "JavaScript",
-        "TypeScript",
+        
         "HTML5",
         "CSS3",
       ],
@@ -84,6 +84,10 @@ const Skills = () => {
         "EJS",
         "DaisyUI",
         "Aceternity UI",
+        "Material UI",
+        "spline",
+        "Framer Motion",
+        "shadcn/ui",
       ],
     },
     {
