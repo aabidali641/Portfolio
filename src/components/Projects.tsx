@@ -124,7 +124,7 @@ const Projects = () => {
           "Budget Limit Alerts and Notifications",
         ],
         githubUrl: "https://github.com/aabidali641/WealthSync-",
-        liveUrl: "#",
+        liveUrl: "https://wealth-sync-aabidali641s-projects.vercel.app/",
         category: "Full Stack With AI Integration",
       },
       {
@@ -169,7 +169,7 @@ const Projects = () => {
           "Bulk and individual email communication using Nodemailer with password recovery support",
           "Admin dashboard with stats and charts powered by Recharts for analytics",
           "Suggestion and feedback module with admin inbox for two-way communication",
-          
+
           "Form handling and validation using React Hook Form, client-side routing via React Router",
           "Image and media storage using Cloudinary with secure access and display",
           "State management using Redux Toolkit and global context for user and event data",
