@@ -41,7 +41,7 @@
 
 ## 📌 Live Demo & Repository
 🔗 **Live Portfolio:** [View Here](https://portfolio-aabidali641s-projects.vercel.app/)  
-💻 **GitHub Repo:** [View Code](https://github.com/your-username/your-repo-name)
+💻 **GitHub Repo:** [View Code]([https://github.com/your-username/your-repo-name](https://github.com/aabidali641/Portfolio)
 
 ---
 
