@@ -1,6 +1,6 @@
 # 🌟 **My Portfolio** - An Adavanced , Fully Animated , Highly Scalable And Super cool intractive Web Application 🚀
 
-> **A Fully Animated, Next-Level Developer Portfolio — Built with TypeScript, React, GSAP & Pure Creativity**  
+> **A Fully Animated, Next-Level Developer Portfolio — Built with TypeScript, React, GSAP ,Resend & Pure Creativity**  
 
 ![Portfolio Preview Banner](https://via.placeholder.com/1200x400?text=My+Animated+Portfolio)  
 *(Replace with your banner GIF or screenshot)*
