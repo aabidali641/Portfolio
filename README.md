@@ -1,4 +1,15 @@
-# 🌟 **My Portfolio** - An Adavanced , Fully Animated , Highly Scalable And Super cool intractive Web Application 🚀
+# <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDhybG5jZ3V6eWx6d3R5ZzV4Y2V6Z3R5b2VjZzZ1bmQwNmxqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7qE1YN7aCHOFS7Fe/giphy.gif" width="50"/> **My Portfolio** <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDhybG5jZ3V6eWx6d3R5ZzV4Y2V6Z3R5b2VjZzZ1bmQwNmxqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7qE1YN7aCHOFS7Fe/giphy.gif" width="50"/> 
+
+<div align="center">
+  
+  ![Advanced](https://img.shields.io/badge/-ADVANCED-6e40ff?style=for-the-badge&logo=starship&logoColor=white)
+  ![Fully Animated](https://img.shields.io/badge/-FULLY_ANIMATED-ff4d80?style=for-the-badge&logo=anime&logoColor=white)
+  ![Highly Scalable](https://img.shields.io/badge/-HIGHLY_SCALABLE-00c4cc?style=for-the-badge&logo=kubernetes&logoColor=white)
+  ![Super Interactive](https://img.shields.io/badge/-SUPER_INTERACTIVE-ffcb47?style=for-the-badge&logo=react&logoColor=black)
+
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=800&lines=Welcome+to+my+cutting-edge+portfolio;Built+with+React+%26+GSAP;60FPS+buttery+smooth+animations;" alt="Typing animation" />
+
+</div>
 
 > **A Fully Animated, Next-Level Developer Portfolio — Built with TypeScript, React, GSAP ,Resend & Pure Creativity**  
 ![Portfolio Banner](./public/HeroImage.png)
