@@ -1,15 +1,35 @@
-# **My Portfolio**
 <div align="center">
-  
-  ![Advanced](https://img.shields.io/badge/-ADVANCED-6e40ff?style=for-the-badge&logo=starship&logoColor=white)
-  ![Fully Animated](https://img.shields.io/badge/-FULLY_ANIMATED-ff4d80?style=for-the-badge&logo=anime&logoColor=white)
-  ![Highly Scalable](https://img.shields.io/badge/-HIGHLY_SCALABLE-00c4cc?style=for-the-badge&logo=kubernetes&logoColor=white)
-  ![Super Interactive](https://img.shields.io/badge/-SUPER_INTERACTIVE-ffcb47?style=for-the-badge&logo=react&logoColor=black)
+
+  <!-- Animated Typing Title -->
+  [![Animated Title](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=800&size=32&duration=3000&pause=500&color=00D8FF&width=800&lines=🚀+MY+PORTFOLIO;✨+Advanced+•+Animated+•+Interactive;🔥+Powered+by+React+•+GSAP+•+TypeScript)](https://yourportfolio.link)
+
+  <!-- Animated Tech Badges -->
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" height="30" /> 
+  <img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white" height="30" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" height="30" />
+  <img src="https://img.shields.io/badge/Resend-000000?style=for-the-badge&logo=resend&logoColor=white" height="30" />
+
+  <!-- Animated Divider -->
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" />
+
+</div>
+
+
+
+
+<div align="center">
+
+
+
+ 
 
 
 [![Typing Animation](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=26&duration=3000&pause=1000&color=58A6FF&width=800&lines=🚀+Next-gen+portfolio+built+with:;⚛️+React+%E2%80%A2+TypeScript+%E2%80%A2+Vite;🎬+GSAP+%26+Framer+Motion+animations;✉️+Resend+for+email+integration)](https://github.com/yourusername)
 
-
+ ![Advanced](https://img.shields.io/badge/-ADVANCED-6e40ff?style=for-the-badge&logo=starship&logoColor=white)
+  ![Fully Animated](https://img.shields.io/badge/-FULLY_ANIMATED-ff4d80?style=for-the-badge&logo=anime&logoColor=white)
+  ![Highly Scalable](https://img.shields.io/badge/-HIGHLY_SCALABLE-00c4cc?style=for-the-badge&logo=kubernetes&logoColor=white)
+  ![Super Interactive](https://img.shields.io/badge/-SUPER_INTERACTIVE-ffcb47?style=for-the-badge&logo=react&logoColor=black)
 
 </div>
 
