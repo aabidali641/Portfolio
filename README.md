@@ -7,7 +7,10 @@
   ![Highly Scalable](https://img.shields.io/badge/-HIGHLY_SCALABLE-00c4cc?style=for-the-badge&logo=kubernetes&logoColor=white)
   ![Super Interactive](https://img.shields.io/badge/-SUPER_INTERACTIVE-ffcb47?style=for-the-badge&logo=react&logoColor=black)
 
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=800&lines=Welcome+to+my+cutting-edge+portfolio;Built+with+React+%26+GSAP;60FPS+buttery+smooth+animations;" alt="Typing animation" />
+
+[![Typing Animation](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=26&duration=3000&pause=1000&color=58A6FF&width=800&lines=🚀+Next-gen+portfolio+built+with:;⚛️+React+%E2%80%A2+TypeScript+%E2%80%A2+Vite;🎬+GSAP+%26+Framer+Motion+animations;✉️+Resend+for+email+integration)](https://github.com/yourusername)
+
+
 
 </div>
 
