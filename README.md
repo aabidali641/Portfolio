@@ -1,5 +1,4 @@
-# <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDhybG5jZ3V6eWx6d3R5ZzV4Y2V6Z3R5b2VjZzZ1bmQwNmxqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7qE1YN7aCHOFS7Fe/giphy.gif" width="50"/> **My Portfolio** <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDhybG5jZ3V6eWx6d3R5ZzV4Y2V6Z3R5b2VjZzZ1bmQwNmxqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7qE1YN7aCHOFS7Fe/giphy.gif" width="50"/> 
-
+# **My Portfolio**
 <div align="center">
   
   ![Advanced](https://img.shields.io/badge/-ADVANCED-6e40ff?style=for-the-badge&logo=starship&logoColor=white)
@@ -14,7 +13,8 @@
 
 </div>
 
-> **A Fully Animated, Next-Level Developer Portfolio — Built with TypeScript, React, GSAP ,Resend & Pure Creativity**  
+> **A Fully Animated, Next-Level Developer Portfolio — Built with TypeScript, React, GSAP ,Resend & Pure Creativity**
+>  
 ![Portfolio Banner](./public/HeroImage.png)
 
 ---
