@@ -1,14 +1,12 @@
 # 🌟 **My Portfolio** - An Adavanced , Fully Animated , Highly Scalable And Super cool intractive Web Application 🚀
 
 > **A Fully Animated, Next-Level Developer Portfolio — Built with TypeScript, React, GSAP ,Resend & Pure Creativity**  
-
-![Portfolio Preview Banner](https://via.placeholder.com/1200x400?text=My+Animated+Portfolio)  
-*(Replace with your banner GIF or screenshot)*
+![Portfolio Banner](./public/HeroImage.png)
 
 ---
 
 ## 📌 Live Demo & Repository
-🔗 **Live Portfolio:** [View Here](https://your-portfolio-link.com)  
+🔗 **Live Portfolio:** [View Here]()  
 💻 **GitHub Repo:** [View Code](https://github.com/your-username/your-repo-name)
 
 ---
