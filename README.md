@@ -215,26 +215,12 @@ Portfolio/
 
 ---
 
-## ⚡ Animations & Interactivity
-
-- **GSAP** for smooth scrolling, reveal animations, and parallax.
-- **Framer Motion** for page transitions, fade-ins, and button interactions.
-- Hover animations for buttons, cards, and icons.
-- Section entry animations triggered on scroll.
-
----
-
-## 📜 Certifications & Achievements
-
-Every certification includes a **live verification link** to ensure authenticity. Achievements are visually highlighted with counters & icons.
-
----
 
 ## 🚀 Getting Started
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/aabidali641/Portfolio.git
 
 # Navigate into the project folder
 cd your-repo-name
