@@ -64,7 +64,53 @@
   - <img src="https://img.shields.io/badge/Download_CV-FF4D00?style=flat-square&logo=adobeacrobatreader&logoColor=white" height="20"> → Instant download
   - <img src="https://img.shields.io/badge/Download_Cover_Letter-00A98F?style=flat-square&logo=microsoftword&logoColor=white" height="20"> → Professional letter
   - <img src="https://img.shields.io/badge/Download_Foreign_CV-0052CC?style=flat-square&logo=googletranslate&logoColor=white" height="20"> → Global version
+ 
+    
+### 🙋 **About Me**
+- Detailed introduction with a personal touch.
+- Animated skill badges & dynamic visuals.
+- Story-driven layout for connection with visitors.
 
+### 💼 **Experience**
+- Interactive timeline using Radix UI components.
+- Hover effects & smooth transitions for each role.
+- Professional work history presented visually.
+
+### 🚀 **Featured Projects**
+- Each project card includes:
+  - Live Link 🌐
+  - GitHub Repository 📂
+- Animated hover effects and tilt interaction (`react-parallax-tilt`).
+- Carousel view with `embla-carousel-react`.
+
+### 🛠 **Skills & Technologies**
+- Animated skill icons.
+- Categorized tech stack (Frontend, Backend, Tools).
+- GSAP stagger animations for logos.
+
+### 📜 **Certifications**
+- Each certification card includes:
+  - Title
+  - Issuer
+  - **Live Verification Link** 🔗
+
+### 🏆 **Achievements**
+- Highlighted accomplishments.
+- Animated counters and icons.
+
+### 📬 **Get in Touch**
+- Interactive contact form using **React Hook Form** + **Zod validation**.
+- Connected with backend via **Supabase**.
+
+### 🌍 **Follow Me**
+- GitHub, LinkedIn, Portfolio, Email, LeetCode, Twitter — all with animated icons.
+- External links open in new tabs.
+
+### 📌 **Footer**
+- Minimal yet functional design.
+- Quick navigation & copyright.
+
+---
 ### 🛠 **Tech Stack Showcase**
 <div align="center">
   <img src="https://skillicons.dev/icons?i=react,ts,gsap,framer,supabase,tailwind,vercel" alt="Tech Stack">
