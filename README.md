@@ -140,7 +140,7 @@
 ---
 
 
-## 📂 **Project Folder Structure**
+### 📂 **Project Folder Structure**
 
 ```bash
 Portfolio/
@@ -235,5 +235,10 @@ npm install
 # 4️⃣ Start development server
 npm run dev
 
-```
 
+```
+### **✨ Work Flow For Getting Started**
+
+<div align="center">
+  [<img src="./public/cloneWorkflow.png" width="400">]
+</div>
