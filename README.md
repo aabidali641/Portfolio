@@ -138,7 +138,7 @@
 
 ---
 
-## 📂 Project Structure
+
 ## 📂 **Project Folder Structure**
 
 ```bash
