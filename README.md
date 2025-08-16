@@ -240,5 +240,5 @@ npm run dev
 ### **✨ Work Flow For Getting Started**
 
 <div align="center">
-  [<img src="./public/cloneWorkflow.png" width="400">]
+  <img src="./public/cloneWorkflow.png" width="400">
 </div>
