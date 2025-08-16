@@ -136,6 +136,7 @@
 | **Theming** | next-themes |
 | **Utilities** | clsx, class-variance-authority |
 
+![Tech Workflow Diagram](./public/techWorkflow.png)
 ---
 
 
@@ -235,3 +236,4 @@ npm install
 npm run dev
 
 ```
+
