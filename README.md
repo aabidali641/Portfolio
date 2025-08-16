@@ -211,22 +211,27 @@ Portfolio/
 ├── tsconfig.json             # TS base config
 └── tsconfig.node.json        # TS config (Node)
 
+```
 
+### **📜 Getting Started** 
+<div align="center">
+  
+[![Typing Animation](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=2500&pause=500&color=58A6FF&width=600&lines=Let's+get+your+development+environment+ready!;Follow+these+simple+steps+below👇)](https://github.com/aabidali641/Portfolio)
 
----
+</div>
 
-
-## 🚀 Getting Started
-
+### 🛠 **Setup Guide**
 ```bash
-# Clone the repository
+# 1️⃣ Clone the repository
 git clone https://github.com/aabidali641/Portfolio.git
 
-# Navigate into the project folder
-cd your-repo-name
+# 2️⃣ Navigate to project folder
+cd Portfolio
 
-# Install dependencies
+# 3️⃣ Install dependencies
 npm install
 
-# Start development server
+# 4️⃣ Start development server
 npm run dev
+
+```
