@@ -267,3 +267,90 @@ $ npm test                             # 🧪 Run tests (if configured)
 
 # Pro tip: Add --verbose for detailed logging
 $ npm run build --verbose
+
+```
+
+### **🙋Deployment Guide** 
+
+<div align="center">
+  
+[![Typing Animation](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=500&color=58A6FF&width=600&lines=Lightning-fast+Vite+deployment;One-click+hosting+solutions;Global+CDN+included)](https://vitejs.dev)
+
+</div>
+
+### 🚀 **Deployment Targets**
+<div align="center">
+
+| Platform | Badge | Command |
+|----------|-------|---------|
+| [Vercel](https://vercel.com) | [![Vercel](https://img.shields.io/badge/▲_DEPLOY-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https://github.com/aabidali641/Portfolio) | `vercel --prod` |
+| [Netlify](https://netlify.com) | [![Netlify](https://img.shields.io/badge/ꓦ_DEPLOY-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://app.netlify.com/start/deploy?repository=https://github.com/aabidali641/Portfolio) | `netlify deploy` |
+| [Cloudflare](https://pages.cloudflare.com) | [![Cloudflare](https://img.shields.io/badge/☁️_DEPLOY-F38020?style=for-the-badge&logo=cloudflarepages&logoColor=white)](https://dash.cloudflare.com/?to=/:account/pages) | `npm run build` |
+| [GitHub Pages](https://pages.github.com) | [![GitHub Pages](https://img.shields.io/badge/🐙_DEPLOY-222222?style=for-the-badge&logo=githubpages&logoColor=white)](https://github.com/aabidali641/Portfolio/deployments) | `gh-pages -d dist` |
+
+</div>
+
+### ⚡ **Vite Optimizations**
+```bash
+# Build with analysis (see bundle breakdown)
+$ npm run build -- --profile
+
+# Preview build locally before deploying
+$ npm run preview
+
+```
+## <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDhybG5jZ3V6eWx6d3R5ZzV4Y2V6Z3R5b2VjZzZ1bmQwNmxqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XcQ0fI4dAqsEErQzCK/giphy.gif" width="40"/> **License** <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDhybG5jZ3V6eWx6d3R5ZzV4Y2V6Z3R5b2VjZzZ1bmQwNmxqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XcQ0fI4dAqsEErQzCK/giphy.gif" width="40"/>
+
+<div align="center">
+
+[![Typing Animation](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=58A6FF&width=600&lines=Open+Source+MIT+License;Freedom+to+use%2C+modify%2C+distribute)](https://opensource.org/licenses/MIT)
+
+</div>
+
+
+<div align="center">
+
+[![MIT License](https://img.shields.io/badge/License-MIT-5865F2?style=for-the-badge&logo=open-source-initiative&logoColor=white)](https://github.com/aabidali641/Portfolio/blob/main/LICENSE)
+[![FOSSA Status](https://img.shields.io/badge/📋_License_Compliant-4CAF50?style=for-the-badge)](https://app.fossa.com/projects/git%2Bgithub.com%2Faabidali641%2FPortfolio)
+[![Contributor Covenant](https://img.shields.io/badge/🤝_Contributor_Friendly-FF4D00?style=for-the-badge&logo=github)](https://github.com/aabidali641/Portfolio/blob/main/CODE_OF_CONDUCT.md)
+
+</div>
+
+### 🌟 **Permissions**
+```mermaid
+graph LR
+    A[You Can] --> B[Use Commercially]
+    A --> C[Modify]
+    A --> D[Distribute]
+    A --> E[Place Warranty]
+```
+
+## <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDhybG5jZ3V6eWx6d3R5ZzV4Y2V6Z3R5b2VjZzZ1bmQwNmxqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XcQ0fI4dAqsEErQzCK/giphy.gif" width="40"/> **Let's Connect!** <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDhybG5jZ3V6eWx6d3R5ZzV4Y2V6Z3R5b2VjZzZ1bmQwNmxqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XcQ0fI4dAqsEErQzCK/giphy.gif" width="40"/>
+
+<div align="center">
+
+[![Typing Animation](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=2800&pause=800&color=58A6FF&width=600&lines=Open+to+collaborations+and+chats;Let's+build+something+amazing+together!)](https://github.com/aabidali641)
+
+</div>
+
+### 🌐 **Digital Handshake**
+<div align="center" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+
+[![Email](https://img.shields.io/badge/-📧_EMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=EA4335)](mailto:mdaabidali28@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/-💼_LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/aabidali641)
+[![GitHub](https://img.shields.io/badge/-💻_GITHUB-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aabidali641)
+[![Twitter](https://img.shields.io/badge/-🐦_TWITTER-1DA1F2?style=for-the-badge&logo=x&logoColor=white)](https://x.com/641Aabid)
+[![Portfolio](https://img.shields.io/badge/-🌐_PORTFOLIO-FF4D00?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-aabidali641s-projects.vercel.app/)
+[![LeetCode](https://img.shields.io/badge/-🧠_LEETCODE-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/aabidAli/)
+
+</div>
+
+### 💬 **Let's Talk Tech**
+```mermaid
+graph TB
+    A[You] -->|Have an idea?| B(Collaborate)
+    A -->|Need help?| C(Consult)
+    A -->|Just say hello| D(Chat)
+    B --> E[Awesome Project]
+    C --> F[Problem Solved]
+    D --> G[New Connection]
