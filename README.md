@@ -139,3 +139,108 @@
 ---
 
 ## 📂 Project Structure
+## 📂 **Project Folder Structure**
+
+```bash
+Portfolio/
+├── dist/                      # Build output
+├── node_modules/              # Dependencies
+├── public/                    # Static assets
+│   ├── logo.png               # Site logo
+│   ├── placeholder.svg        # Fallback images
+│   └── robots.txt             # SEO configuration
+│
+├── src/                       # Source code
+│   ├── assets/                # Media assets
+│   │   ├── hero-bg.jpg        # Hero background
+│   │   └── pattern-bg.jpg     # UI patterns
+│   │
+│   ├── components/            # React components
+│   │   └── ui/                # UI components
+│   │       ├── About.tsx      # About section
+│   │       ├── Achivements.tsx # Achievements
+│   │       ├── Certifications.tsx # Certifications
+│   │       ├── Contact.tsx    # Contact form
+│   │       ├── Experience.tsx # Work experience
+│   │       ├── FollowMe.tsx   # Social links
+│   │       ├── Footer.tsx     # Page footer
+│   │       ├── Hero.tsx       # Hero section
+│   │       ├── Navigation.tsx # Navbar
+│   │       ├── Projects.tsx   # Projects showcase
+│   │       └── Skills.tsx     # Skills section
+│   │
+│   ├── hooks/                 # Custom hooks
+│   │   ├── use-mobile.tsx     # Mobile detection
+│   │   └── use-toast.ts       # Notification toast
+│   │
+│   ├── integrations/          # Third-party integrations
+│   │   └── supabase/          # Supabase config
+│   │       ├── client.ts      # Supabase client
+│   │       └── types.ts       # Type definitions
+│   │
+│   ├── lib/                   # Utilities
+│   │   └── utils.ts           # Helper functions
+│   │
+│   ├── pages/                 # Page components
+│   │   ├── Index.tsx          # Main page
+│   │   └── NotFound.tsx       # 404 page
+│   │
+│   ├── supabase/              # Supabase functions
+│   │   ├── functions/         # Edge functions
+│   │   │   └── send-contact-email/
+│   │   │       └── index.ts   # Email handler
+│   │   └── migrations/       # Database migrations
+│   │
+│   ├── App.css                # Global styles
+│   ├── App.tsx                # Root component
+│   ├── index.css              # Base styles
+│   ├── main.tsx               # Entry point
+│   └── vite-env.d.ts          # TypeScript types
+│
+├── .gitignore                # Git exclude rules
+├── bun.lockb                 # Bun lockfile
+├── components.json           # UI components config
+├── eslint.config.js          # ESLint config
+├── index.html                # HTML template
+├── package.json              # Project manifest
+├── package-lock.json         # NPM lockfile
+├── postcss.config.js         # PostCSS config
+├── README.md                 # Documentation
+├── tailwind.config.ts        # Tailwind config
+├── tsconfig.app.json         # TS config (app)
+├── tsconfig.json             # TS base config
+└── tsconfig.node.json        # TS config (Node)
+
+
+
+---
+
+## ⚡ Animations & Interactivity
+
+- **GSAP** for smooth scrolling, reveal animations, and parallax.
+- **Framer Motion** for page transitions, fade-ins, and button interactions.
+- Hover animations for buttons, cards, and icons.
+- Section entry animations triggered on scroll.
+
+---
+
+## 📜 Certifications & Achievements
+
+Every certification includes a **live verification link** to ensure authenticity. Achievements are visually highlighted with counters & icons.
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
+
+# Navigate into the project folder
+cd your-repo-name
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
