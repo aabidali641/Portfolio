@@ -66,47 +66,50 @@
   - <img src="https://img.shields.io/badge/Download_Foreign_CV-0052CC?style=flat-square&logo=googletranslate&logoColor=white" height="20"> → Global version
  
     
-### 🙋 **About Me**
+### 🙋 **About Me Section**
 - Detailed introduction with a personal touch.
 - Animated skill badges & dynamic visuals.
 - Story-driven layout for connection with visitors.
 
-### 💼 **Experience**
+### 💼 **Experience Section**
 - Interactive timeline using Radix UI components.
 - Hover effects & smooth transitions for each role.
 - Professional work history presented visually.
 
-### 🚀 **Featured Projects**
+### 🚀 **Featured Projects Section**
 - Each project card includes:
   - Live Link 🌐
+  - Key Features
+  - Project Category 🌐
+  - Technologies Used
   - GitHub Repository 📂
 - Animated hover effects and tilt interaction (`react-parallax-tilt`).
 - Carousel view with `embla-carousel-react`.
 
-### 🛠 **Skills & Technologies**
+### 🛠 **Skills & Technologies Section**
 - Animated skill icons.
 - Categorized tech stack (Frontend, Backend, Tools).
 - GSAP stagger animations for logos.
 
-### 📜 **Certifications**
+### 📜 **Certifications Section**
 - Each certification card includes:
   - Title
   - Issuer
   - **Live Verification Link** 🔗
 
-### 🏆 **Achievements**
+### 🏆 **Achievements Section**
 - Highlighted accomplishments.
 - Animated counters and icons.
 
-### 📬 **Get in Touch**
+### 📬 **Get in Touch Section**
 - Interactive contact form using **React Hook Form** + **Zod validation**.
 - Connected with backend via **Supabase**.
 
-### 🌍 **Follow Me**
+### 🌍 **Follow Me Section**
 - GitHub, LinkedIn, Portfolio, Email, LeetCode, Twitter — all with animated icons.
 - External links open in new tabs.
 
-### 📌 **Footer**
+### 📌 **Footer Section**
 - Minimal yet functional design.
 - Quick navigation & copyright.
 
@@ -115,7 +118,7 @@
 <div align="center">
   <img src="https://skillicons.dev/icons?i=react,ts,gsap,framer,supabase,tailwind,vercel" alt="Tech Stack">
 </div>
-## 🛠 Tech Stack & Tools
+### 🛠 **Tech Stack Showcase**
 
 | Category | Technologies / Libraries |
 |----------|---------------------------|
