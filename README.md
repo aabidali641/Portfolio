@@ -354,3 +354,21 @@ graph TB
     B --> E[Awesome Project]
     C --> F[Problem Solved]
     D --> G[New Connection]
+```
+
+## <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDhybG5jZ3V6eWx6d3R5ZzV4Y2V6Z3R5b2VjZzZ1bmQwNmxqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7qE1YN7aCHOFS7Fe/giphy.gif" width="40"/> **Crafted With** <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDhybG5jZ3V6eWx6d3R5ZzV4Y2V6Z3R5b2VjZzZ1bmQwNmxqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7qE1YN7aCHOFS7Fe/giphy.gif" width="40"/>
+
+<div align="center">
+
+[![Typing Animation](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=FF4D00&width=600&lines=Built+with+❤️%2C+TypeScript%2C+and+endless+creativity;Powered+by+innovation+and+passion)](https://github.com/aabidali641/Portfolio)
+
+</div>
+
+### ✨ **Tech Heartbeat**
+```mermaid
+pie
+    title Development DNA
+    "TypeScript" : 35
+    "Creativity" : 30
+    "Passion" : 25
+    "Coffee" : 10
