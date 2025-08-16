@@ -240,5 +240,30 @@ npm run dev
 ### **✨ Work Flow For Getting Started**
 
 <div align="center">
-  <img src="./public/cloneWorkflow.png" width="400">
+  <img src="./public/cloneWorkflow.png" width
+    ="400">
 </div>
+
+### **✨ Project Scripts** 
+
+<div align="center">
+  
+[![Typing Animation](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=500&color=58A6FF&width=600&lines=Available+NPM+Scripts;One-command+workflow+automation)](https://npmjs.com)
+
+</div>
+
+
+### 🚀 **Command Palette**
+```bash
+# Interactive terminal (try these commands)
+
+$ npm run [TAB]                        # Shows all available commands
+$ npm run dev                          # 🟢 Starts Vite dev server (localhost:5173)
+$ npm run build                        # 🏗️  Creates optimized production build
+$ npm run build:dev                    # 🔧 Development mode build
+$ npm run lint                         # 🔍 Runs ESLint with prettier
+$ npm run preview                      # 👀 Launches production preview
+$ npm test                             # 🧪 Run tests (if configured)
+
+# Pro tip: Add --verbose for detailed logging
+$ npm run build --verbose
