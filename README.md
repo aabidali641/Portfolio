@@ -118,7 +118,7 @@
 <div align="center">
   <img src="https://skillicons.dev/icons?i=react,ts,gsap,framer,supabase,tailwind,vercel" alt="Tech Stack">
 </div>
-### 🛠 **Tech Stack Showcase**
+
 
 | Category | Technologies / Libraries |
 |----------|---------------------------|
