@@ -360,7 +360,7 @@ graph TB
 
 <div align="center">
 
-[![Typing Animation](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=FF4D00&width=600&lines=Built+with+❤️%2C+TypeScript%2C+and+endless+creativity;Powered+by+innovation+and+passion)](https://github.com/aabidali641/Portfolio)
+[![Typing Animation](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=FF4D00&width=600&lines=Built+with❤️TypeScript+and+endless+creativity;Powered+by+innovation+and+passion)](https://github.com/aabidali641/Portfolio)
 
 </div>
 
