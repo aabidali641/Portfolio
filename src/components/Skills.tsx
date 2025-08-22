@@ -62,7 +62,7 @@ const Skills = () => {
       icon: Code,
       skills: [
         "Java",
-        "C++",
+        
         "Python",
         "JavaScript",
         
