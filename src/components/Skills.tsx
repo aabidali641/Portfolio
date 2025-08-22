@@ -81,7 +81,6 @@ const Skills = () => {
         "GSAP",
         "Tailwind CSS",
         "Bootstrap",
-        "EJS",
         "DaisyUI",
         "Aceternity UI",
         "Material UI",
