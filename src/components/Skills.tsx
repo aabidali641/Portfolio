@@ -96,7 +96,6 @@ const Skills = () => {
       skills: [
         "Node.js",
         "Express.js",
-        "Spring Boot",
         "RESTful APIs",
         "Microservices",
         "Passport.js",
@@ -107,7 +106,7 @@ const Skills = () => {
     {
       title: "Databases",
       icon: Database,
-      skills: ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Mongoose"],
+      skills: ["MongoDB", "PostgreSQL", "MySQL", "Redis"],
     },
     {
       title: "Tools & Platforms",
