@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Briefcase } from "lucide-react";
-import Tilt from "react-parallax-tilt"; // Import Tilt
+import Tilt from "react-parallax-tilt";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,7 +15,6 @@ const Experience = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      
       gsap.fromTo(
         titleRef.current,
         { opacity: 0, y: 50 },
@@ -29,10 +28,9 @@ const Experience = () => {
             start: "top 80%",
             toggleActions: "play none none reverse",
           },
-        }
+        },
       );
 
-      // Timeline items animation
       gsap.fromTo(
         timelineRef.current?.children || [],
         { opacity: 0, x: -100 },
@@ -47,78 +45,106 @@ const Experience = () => {
             start: "top 80%",
             toggleActions: "play none none reverse",
           },
-        }
+        },
       );
     }, sectionRef);
 
     return () => ctx.revert();
   }, []);
 
-  
-     const experiences = [
-       {
-         title: "Full Stack Developer Intern",
-         company: "Academic Internship – MMMUT",
-         period: "2025",
-         location: "MMMUT, Gorakhpur",
-         type: "Academic Internship",
-         description:
-           "Contributed as a full stack developer in building Nexus Society — a centralized, full-stack campus society management web application aimed at simplifying and digitalizing society operations. Worked closely with the team to implement secure authentication, responsive user interfaces, real-time communications, and payment integration.",
-         achievements: [
-           "Developed core modules including user authentication, event registration, and merchandise management.",
-           "Integrated Razorpay payment gateway for secure online transactions.",
-           "Implemented password reset and email notification system using Nodemailer.",
-           "Built responsive and interactive UI using Tailwind CSS, Framer Motion, and React Parallax Tilt.",
-           "Used React Hook Form and Redux Toolkit for state and form handling across the application.",
-           "Connected frontend and backend using RESTful APIs built with Express.js and Node.js.",
-           "Managed database schemas and operations using MongoDB and Mongoose.",
-           "Ensured role-based access control with JWT to separate user and admin privileges.",
-           "Collaborated on GitHub and participated in CI/CD automation using GitHub Actions.",
-           "Deployed frontend on Vercel and backend on Render ensuring production readiness.",
-         ],
-         technologies: [
-           "React.js",
-           "TypeScript",
-           "Vite",
-           "Tailwind CSS",
-           "Framer Motion",
-           "Redux Toolkit",
-           "React Hook Form",
-           "React Router DOM",
-           "Recharts",
-           "React Toastify",
-           "Lucide React",
-           "React Parallax Tilt",
-           "Node.js",
-           "Express.js",
-           "MongoDB",
-           "Mongoose",
-           "JWT",
-           "Nodemailer",
-           "Razorpay",
-           "Cloudinary",
-           "Vercel",
-           "Render",
-           "GitHub Actions",
-         ],
-       },
-       {
-         title: "Java Intern",
-         company: "InternPe",
-         period: "07/2024 - 09/2024",
-         location: "Remote",
-         type: "Internship",
-         description:
-           "Designed and developed four interactive Java-based applications during internship.",
-         achievements: [
-           "Guessing Game - Interactive number guessing game with user feedback",
-           "Rock-Paper-Scissors - Classic game implementation with clean UI",
-           "Tic-Tac-Toe - Two-player game with win detection logic",
-           "Connect Four Game - Strategic board game with advanced algorithms",
-         ],
-         technologies: ["Java", "OOP", "Game Development", "Algorithms"],
-       },
-     ];
+  const experiences = [
+    // 🔥 Assistant Professor (Added)
+    {
+      title: "Assistant Professor (BCA)",
+      company: "Meerut Institute of Technology",
+      period: "2025 - Present",
+      location: "Meerut, Uttar Pradesh",
+      type: "Full-Time",
+      description:
+        "Working as an Assistant Professor in the Department of Computer Application, focusing on delivering concept-driven and practical-oriented education.",
+
+      achievements: [
+        "Teaching Web Technologies (HTML, CSS, JavaScript, Bootstrap) with practical implementation",
+        "Handling Emerging Trends including IoT, Cloud Computing, Blockchain, Robotics, and Industry 4.0",
+        "Conducting lab sessions to strengthen students’ hands-on coding skills",
+        "Mentoring students in academic projects, assignments, and technical development",
+        "Guiding final year students in project development, documentation, and viva preparation",
+        "Supporting students on CodeTantra platform for Java and C programming",
+        "Providing academic counseling and assisting in admission-related guidance",
+        "Participating in institutional activities including Hobby Club and cultural events",
+        "Enhancing student engagement through competitions and technical activities",
+        "Supporting academic coordination and institutional processes",
+      ],
+
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "React.js",
+        "MERN Stack",
+        "GitHub",
+        "CodeTantra",
+        "Teaching & Mentoring",
+      ],
+    },
+
+    // Internship 1
+    {
+      title: "Full Stack Developer Intern",
+      company: "Academic Internship – MMMUT",
+      period: "2025",
+      location: "MMMUT, Gorakhpur",
+      type: "Academic Internship",
+      description:
+        "Worked on Nexus Society — a full-stack campus management system for handling events, memberships, and payments.",
+
+      achievements: [
+        "Developed authentication, event registration, and merchandise modules",
+        "Integrated Razorpay payment gateway",
+        "Implemented email system using Nodemailer",
+        "Built UI with React, Tailwind CSS, and Framer Motion",
+        "Connected frontend & backend via REST APIs",
+        "Used MongoDB and Mongoose for database management",
+        "Implemented JWT-based authentication",
+        "Deployed on Vercel and Render",
+      ],
+
+      technologies: [
+        "React.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JWT",
+        "Razorpay",
+        "Cloudinary",
+        "Vercel",
+        "Render",
+      ],
+    },
+
+    // Internship 2
+    {
+      title: "Java Intern",
+      company: "InternPe",
+      period: "07/2024 - 09/2024",
+      location: "Remote",
+      type: "Internship",
+      description:
+        "Developed multiple Java-based applications focusing on logic building and problem-solving.",
+
+      achievements: [
+        "Built Guessing Game with user feedback",
+        "Developed Rock-Paper-Scissors game",
+        "Created Tic-Tac-Toe with win logic",
+        "Implemented Connect Four game",
+      ],
+
+      technologies: ["Java", "OOP", "Algorithms"],
+    },
+  ];
 
   return (
     <section ref={sectionRef} id="experience" className="py-20">
@@ -149,12 +175,10 @@ const Experience = () => {
         <div ref={timelineRef} className="max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
             <div key={index} className="relative mb-12 last:mb-0">
-              
               <div className="absolute left-8 top-12 bottom-0 w-0.5 bg-primary/30 hidden md:block"></div>
 
               <Card className="glass border-primary/20 hover:border-primary/40 transition-all duration-300 hover:neon-glow ml-0 md:ml-20">
                 <CardContent className="p-8">
-                 
                   <div className="absolute -left-2 top-8 w-4 h-4 bg-primary rounded-full border-4 border-background hidden md:block"></div>
 
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
