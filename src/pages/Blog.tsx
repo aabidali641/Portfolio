@@ -1,77 +1,58 @@
 import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 const Blog = () => {
+  const titleRef = useRef(null);
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      titleRef.current,
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
+    );
+
+    gsap.fromTo(
+      cardRef.current,
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1, delay: 0.3, ease: "power3.out" },
+    );
+  }, []);
+
   return (
-    <div className="min-h-screen bg-black text-white px-6 py-16">
-      {/* Title */}
-      <h1 className="text-4xl md:text-5xl font-bold text-center mb-10">
-        Developer Insights & Portfolio Breakdown
-      </h1>
-
-      {/* Intro */}
-      <p className="text-center text-gray-400 max-w-2xl mx-auto mb-16">
-        Explore how I built a fully animated, scalable and interactive developer
-        portfolio using modern technologies like React, TypeScript, GSAP and
-        more.
-      </p>
-
-      {/* Blog Card */}
-      <div className="max-w-4xl mx-auto space-y-8">
-        <Link
-          to="/blog/nexus-society"
-          className="block border border-gray-700 rounded-xl p-6 hover:bg-gray-900 transition"
+    <section className="py-20 bg-secondary/20 min-h-screen">
+      <div className="container mx-auto px-6">
+        {/* TITLE */}
+        <h1
+          ref={titleRef}
+          className="text-4xl md:text-6xl font-bold text-center mb-16 text-gradient"
         >
-          <h2 className="text-2xl font-semibold mb-3">
-            ✨ Building a Fully Animated Developer Portfolio (MERN + GSAP)
-          </h2>
+          <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400 bg-clip-text text-transparent">
+            Developer Blogs
+          </span>
+        </h1>
 
-          <p className="text-gray-400 mb-4">
-            A deep dive into creating an advanced portfolio with animations,
-            interactive UI, scalable architecture, and modern tools.
-          </p>
+        {/* BLOG CARD */}
+        <div ref={cardRef} className="max-w-3xl mx-auto">
+          <Link
+            to="/blog/nexus-society"
+            className="block glass p-8 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:neon-glow"
+          >
+            <h2 className="text-2xl font-bold mb-3 text-primary">
+              Building a Fully Animated Developer Portfolio
+            </h2>
 
-          <ul className="text-sm text-gray-500 list-disc ml-5 space-y-1">
-            <li>GSAP & Framer Motion animations</li>
-            <li>Interactive UI with ShadCN & Radix UI</li>
-            <li>React + TypeScript architecture</li>
-            <li>Real-world scalable project structure</li>
-          </ul>
-        </Link>
-      </div>
+            <p className="text-muted-foreground mb-4">
+              Deep dive into how I built a scalable, animated portfolio using
+              React, GSAP, and modern tools.
+            </p>
 
-      {/* Divider */}
-      <div className="border-t border-gray-800 my-16"></div>
-
-      {/* Extra Sections (branding style) */}
-
-      <div className="text-center space-y-10">
-        <h2 className="text-2xl font-semibold">🌟 Permissions</h2>
-        <p className="text-gray-400">
-          MIT License | Open Source | Community Driven
-        </p>
-
-        <h2 className="text-2xl font-semibold">🌐 Digital Handshake</h2>
-        <div className="flex flex-wrap justify-center gap-4 text-blue-400">
-          <a href="mailto:your@email.com">Email</a>
-          <a href="https://linkedin.com">LinkedIn</a>
-          <a href="https://github.com">GitHub</a>
-          <a href="https://twitter.com">Twitter</a>
-          <a href="/">Portfolio</a>
-          <a href="#">LeetCode</a>
+            <span className="text-sm text-primary">Read More →</span>
+          </Link>
         </div>
-
-        <h2 className="text-2xl font-semibold">💬 Let's Talk Tech</h2>
-        <p className="text-gray-400">
-          Always open to discussing new projects, ideas, and opportunities.
-        </p>
-
-        <h2 className="text-2xl font-semibold">✨ Tech Heartbeat</h2>
-        <p className="text-gray-400">
-          Crafted with passion using React, TypeScript, Tailwind CSS, GSAP, and
-          modern web technologies.
-        </p>
       </div>
-    </div>
+    </section>
   );
 };
 
