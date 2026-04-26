@@ -93,7 +93,7 @@ const Hero = () => {
     try {
       setLoading(true);
       const fileUrl =
-        "https://raw.githubusercontent.com/aabidali641/My-Documents/main/Aabid%20Ali%20Resume.pdf";
+        "https://raw.githubusercontent.com/aabidali641/My-Documents/main/MY%20RESUME.pdf";
       const response = await fetch(fileUrl);
       if (!response.ok) throw new Error("Failed to fetch file");
 
