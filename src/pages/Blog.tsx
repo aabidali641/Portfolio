@@ -36,7 +36,7 @@ const Blog = () => {
         {/* BLOG CARD */}
         <div ref={cardRef} className="max-w-3xl mx-auto">
           <Link
-            to="/blog/nexus-society"
+            to="/blog/BlogDetail"
             className="block glass p-8 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:neon-glow"
           >
             <h2 className="text-2xl font-bold mb-3 text-primary">
